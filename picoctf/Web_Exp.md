@@ -74,6 +74,9 @@ The query is now,
 
 On reloading ```http://shape-facility.picoctf.net:52827/filter.php```, we finally get the flag. 
 
+<img width="1512" height="982" alt="Screenshot 2025-10-24 at 1 05 02 AM" src="https://github.com/user-attachments/assets/0e427271-860e-4321-9dab-d7fa93b3e7d3" />
+
+
 ## Flag:
 ```
 picoCTF{y0u_m4d3_1t_79a0ddc6}
