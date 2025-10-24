@@ -143,16 +143,31 @@ Who doesn't love cookies? Try to figure out the best one.
 
 ## Solution: 
 
+On opening the provided website, it asks you to enter the name of a cookie. 
+On inspecting the webiste, a new page is opened that shows the following 
+
+<img width="1512" height="982" alt="Screenshot 2025-10-24 at 1 52 33 PM" src="https://github.com/user-attachments/assets/dd8514c8-f3de-4c26-a176-e64057c35e8e" />
+
+Otherwise it shows 
+
+<img width="1512" height="982" alt="Screenshot 2025-10-24 at 2 24 34 PM" src="https://github.com/user-attachments/assets/4862383a-39a0-4f42-a827-5bf19ea21f8e" />
+
+It is also seen that the value of name changes for every different type of cookie that is input.
+
+<img width="1512" height="982" alt="Screenshot 2025-10-24 at 1 52 21 PM" src="https://github.com/user-attachments/assets/f8211170-a9ff-4023-b3fd-03b21c64ef05" />
+
+To get the flag, I just kept changing the value and reloading the page till the flag showed up. 
+
+
+<img width="1512" height="982" alt="Screenshot 2025-10-24 at 2 21 38 PM" src="https://github.com/user-attachments/assets/0b93e8b0-c990-4b79-afa2-ead66a4d47e8" />
+
+
 ## Flag:
 ```
-
+picoCTF{3v3ry1_l0v3s_c00k135_bb3b3535}
 ```
 
-## Concepts learnt:
 
-## Notes: 
-
-## Resources:
 
 
 
