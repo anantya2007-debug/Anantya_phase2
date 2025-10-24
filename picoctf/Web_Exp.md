@@ -136,8 +136,23 @@ picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_bdc95c1a}
 - [https://medium.com/@bootstrapsecurity/server-side-template-injection-ssti-advanced-exploitation-techniques-2d8ccdf6270f](url)
 - [https://onsecurity.io/article/server-side-template-injection-with-jinja2/](url)
   
+# 3. Cookies 
 
+Who doesn't love cookies? Try to figure out the best one. 
+[http://mercury.picoctf.net:17781/](url)
 
+## Solution: 
+
+## Flag:
+```
+
+```
+
+## Concepts learnt:
+
+## Notes: 
+
+## Resources:
 
 
 
