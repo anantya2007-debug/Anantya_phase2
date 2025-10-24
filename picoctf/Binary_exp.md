@@ -14,7 +14,7 @@ The code given is shown below.
 <img width="1512" height="982" alt="Screenshot 2025-10-24 at 8 16 02 PM" src="https://github.com/user-attachments/assets/6949caa4-44c7-4e88-8c92-5f387b7a3150" />
 
 From this, I saw that the buffer size was given as 16
-<img width="435" height="60" alt="Screenshot 2025-10-24 at 8 16 23 PM" src="https://github.com/user-attachments/assets/3207e5e0-25c0-4cc1-9e6e-c3541d18d1b1" />
+<img width="435" height="120" alt="Screenshot 2025-10-24 at 8 16 23 PM" src="https://github.com/user-attachments/assets/3207e5e0-25c0-4cc1-9e6e-c3541d18d1b1" />
 
 In order to cause a buffer overflow, I had to input something that had a length of more than 16
 
