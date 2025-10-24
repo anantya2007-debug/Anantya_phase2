@@ -16,7 +16,7 @@ The code given is shown below.
 From this, I saw that the buffer size was given as 16
 <img width="435" height="120" alt="Screenshot 2025-10-24 at 8 16 23 PM" src="https://github.com/user-attachments/assets/3207e5e0-25c0-4cc1-9e6e-c3541d18d1b1" />
 
-In order to cause a buffer overflow, I had to input something that had a length of more than 16
+In order to cause a buffer overflow, I had to input something that had a length of more than 16, thus causing ```sigsegv_handler()``` to print the flag. 
 
 <img width="435" height="44" alt="Screenshot 2025-10-24 at 8 21 05 PM" src="https://github.com/user-attachments/assets/0ec57490-dc8a-4000-b972-5422e79f2f60" />
 
