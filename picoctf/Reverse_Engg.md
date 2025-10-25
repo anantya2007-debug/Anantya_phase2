@@ -8,6 +8,8 @@ Make a table that contains each value of the loop variables and the correspondin
 ## Solution 
 I made the table mentioned in the hints and then put all the characters together to get the flag.
 
+<img width="409" height="638" alt="Screenshot 2025-10-25 at 7 03 43 PM" src="https://github.com/user-attachments/assets/da23d663-2948-44d9-aed2-6f2831a0fd61" />
+
 
 ## Flag:
 ```
