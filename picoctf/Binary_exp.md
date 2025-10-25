@@ -75,3 +75,15 @@ picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_dc0f36c4}
 
 - [https://owasp.org/www-community/attacks/Format_string_attack](url)
 
+
+# 3. Clutter-overflow 
+
+Clutter, clutter everywhere, and not a byte to use.
+```nc mars.picoctf.net 31890```
+
+## Solution 
+
+## Concepts learned 
+
+- GBD is a tool used for debugging programs by letting you examine their internal state while the program is running 
+
