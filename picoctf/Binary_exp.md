@@ -33,7 +33,7 @@ picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}
 
 - [https://www.imperva.com/learn/application-security/buffer-overflow/](url)
 
-# Format string 0
+# 2. Format string 0
 
 Can you use your knowledge of format strings to make the customers happy?
 Download the binary here.
@@ -56,7 +56,7 @@ This seemed like it was hinting at something with a larger length.
 The format specifier ```%114d``` was seen in ```Gr%114d_Cheese```. This is a string exploit used to control the output width. 
 
 In order to get the flag, I needed a second choice that includes a format specifier. 
-The only such option was ```Cla%sic_Che%s%steak'''.
+The only such option was ```Cla%sic_Che%s%steak```.
 
 After entering this, the flag was printed. 
 <img width="910" height="220" alt="Screenshot 2025-10-25 at 9 03 57 AM" src="https://github.com/user-attachments/assets/d8cf02a6-9272-42d0-a903-75e046421955" />
