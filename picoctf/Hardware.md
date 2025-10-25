@@ -13,7 +13,7 @@ As an example, entering x = 34359738368 gives (y0, ..., y11), so the flag would 
 First, I converted the input x = 30478191278 into binary by dividing by 2. 
 I got x = 011100011000101001000100101010101110 in the case of 36 digits. 
 
-I then replaced the values of x0, x1, x2, ..., x35 with the digits of binary x and got the following output.
+I then replaced the values of x0, x1, x2, ..., x35 with the digits of binary x (starting from the MSB) and got the following output.
 ![WhatsApp Image 2025-10-25 at 17 42 57](https://github.com/user-attachments/assets/71b995ea-9803-49e2-aa2c-72284b01f606)
 
 THe flag is in the form of ```nite{}``` and the values of y0, y1..., y11 inside the brackets. 
