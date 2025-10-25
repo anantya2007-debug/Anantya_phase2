@@ -13,7 +13,7 @@ As an example, entering x = 34359738368 gives (y0, ..., y11), so the flag would 
 First, I converted the input x = 30478191278 into binary by dividing by 2. 
 I got x = 011100011000101001000100101010101110 in the case of 36 digits. 
 
-I then replaced the values of x0, x1, x2, ..., x35 with the digits of binary x and got the following output.![WhatsApp Image 2025-10-25 at 17 42 57](https://github.com/user-attachments/assets/f01217a7-2354-42ec-b1c7-fafe00e35c7d)
+I then replaced the values of x0, x1, x2, ..., x35 with the digits of binary x and got the following output.
 ![WhatsApp Image 2025-10-25 at 17 42 57](https://github.com/user-attachments/assets/71b995ea-9803-49e2-aa2c-72284b01f606)
 
 THe flag is in the form of ```nite{}``` and the values of y0, y1..., y11 inside the brackets. 
@@ -24,7 +24,7 @@ nite{100010011000}
 ```
 
 # Notes:
-In order to figure out if the values of x0, x1..., x35, started from MSB or the LSB, I used the example question to match the flag given to the values of ```y``` that I was getting. ![WhatsApp Image 2025-10-25 at 17 42 57 (1)](https://github.com/user-attachments/assets/9f8d44f5-5ae2-4e1e-b616-96e458f4c6ed)
+In order to figure out if the values of x0, x1..., x35, started from MSB or the LSB, I used the example question to match the flag given to the values of ```y``` that I was getting. 
 
 ![WhatsApp Image 2025-10-25 at 17 42 57 (1)](https://github.com/user-attachments/assets/f6996a80-7a60-4650-bb63-173a65ca3943)
 
