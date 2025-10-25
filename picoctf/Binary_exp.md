@@ -32,3 +32,46 @@ picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}
 ## Resources:
 
 - [https://www.imperva.com/learn/application-security/buffer-overflow/](url)
+
+# Format string 0
+
+Can you use your knowledge of format strings to make the customers happy?
+Download the binary here.
+Download the source here.
+Additional details will be available after launching your challenge instance.
+
+Connect with the challenge instance here:
+```nc mimas.picoctf.net 65431```
+
+## Solution
+
+The Format String exploit occurs when the submitted data of an input string is evaluated as a command by the application. 
+In the line of code below, the format specifier is not mentioned (i.e. ```%s```) so I thought that this could possibly trigger some vulnerabilities. 
+<img width="230" height="111" alt="Screenshot 2025-10-25 at 9 04 15 AM" src="https://github.com/user-attachments/assets/996d094b-ad54-430a-a21e-0c81393a2c6b" />
+
+For the first input, I tried a random option first, but it returned this. 
+<img width="563" height="133" alt="Screenshot 2025-10-25 at 9 06 25 AM" src="https://github.com/user-attachments/assets/d586b85f-88c2-42c6-87b9-6150db572ab7" />
+
+This seemed like it was hinting at something with a larger length. 
+The format specifier ```%114d``` was seen in ```Gr%114d_Cheese```. This is a string exploit used to control the output width. 
+
+In order to get the flag, I needed a second choice that includes a format specifier. 
+The only such option was ```Cla%sic_Che%s%steak'''.
+
+After entering this, the flag was printed. 
+<img width="910" height="220" alt="Screenshot 2025-10-25 at 9 03 57 AM" src="https://github.com/user-attachments/assets/d8cf02a6-9272-42d0-a903-75e046421955" />
+
+## Flag:
+```
+picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_dc0f36c4}
+```
+
+## Concepts learnt:
+
+- The **Format String exploit** occurs when the submitted data of an input string is evaluated as a command by the application.
+- ```%d``` is a format specifier which gives a decimal integer. When a number is placed in front of it, the number is how many decimal numbers the program will give during execution 
+
+## Resources:
+
+- [https://owasp.org/www-community/attacks/Format_string_attack](url)
+
