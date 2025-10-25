@@ -23,7 +23,7 @@ THe flag is in the form of ```nite{}``` and the values of y0, y1..., y11 inside 
 nite{100010011000}
 ```
 
-# Notes:
+## Notes:
 In order to figure out if the values of x0, x1..., x35, started from MSB or the LSB, I used the example question to match the flag given to the values of ```y``` that I was getting. 
 
 ![WhatsApp Image 2025-10-25 at 17 42 57 (1)](https://github.com/user-attachments/assets/f6996a80-7a60-4650-bb63-173a65ca3943)
