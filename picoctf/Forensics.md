@@ -21,6 +21,11 @@ This seemed to be only a part of the picture, so I tried increasing the width an
 By changing the width, the picture got messed up, so I changed it back to the original. 
 <img width="1131" height="332" alt="Screenshot 2025-10-27 at 6 51 13 PM" src="https://github.com/user-attachments/assets/f5ca0c48-796e-4dd1-89dd-7d2809122052" />
 
+I then tried changing the height, which then gave me the flag. 
+
+<img width="1086" height="405" alt="Screenshot 2025-10-27 at 6 55 26 PM" src="https://github.com/user-attachments/assets/1cdf82fe-4c70-452b-8953-b166aaa386cf" />
+
+
 ## Resources:
 - [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
 - [https://stackoverflow.com/questions/71812494/how-should-bmp-header-look-like](url)
@@ -35,8 +40,6 @@ From the hint "How did pictures from the moon landing get sent back to Earth?", 
 Using an online SSTV decoder [https://sstv-decoder.mathieurenaud.fr/](url), I was able to get an image from the provided wav file.
 
 <img width="673" height="497" alt="Screenshot 2025-10-27 at 1 20 29 PM" src="https://github.com/user-attachments/assets/2f0b2864-07b1-44d3-94f3-3a1b0edf22bd" />
-
-
 
 ## Flag:
 ```
