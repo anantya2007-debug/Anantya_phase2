@@ -1,4 +1,14 @@
-# m00nwalk
+# 2. tunn3l v1s10n
+
+We found this file. Recover the flag.
+Hint: Weird that it won't display right...
+
+## Solution 
+I first viewed the file in hex format using [https://hexed.it/](url). On opening, it looked something like this. 
+<img width="1512" height="982" alt="Screenshot 2025-10-27 at 5 46 55 PM" src="https://github.com/user-attachments/assets/345412cd-97d8-4fd4-aad0-9ec437f699f7" />
+
+
+# 3. m00nwalk
 
 Decode this message from the moon.
 
