@@ -40,7 +40,7 @@ Here, by using the public numbers ```g``` and ```p```, the private numbers ```a`
 In the encoded code, the line is ```cipher.append(((ord(char) * key*311)))```. Thus, to reverse this, I used ```char_val = num // (key * 311)``` to undo the multiplication lock. 
 
 ### XOR + reversal lock
-Since XOR is a reversible operation, I just applied the same thing again 
+Since XOR is a reversible operation, I just applied the same thing again and then reversed the text again to get the flag.
 
 
 ```bash
@@ -51,7 +51,7 @@ Since XOR is a reversible operation, I just applied the same thing again
         if num == 0:
             plaintext += chr(0)
         else:
-            char_val = num // (key * 311)
+            char_val = num // (key * 311) # ecryption code was: cipher.append(((ord(char) * key*311))) thus, we divide to reverse
             plaintext += chr(char_val)
     return plaintext
 
@@ -62,7 +62,7 @@ def dynamic_xor_decrypt(cipher_text, text_key):
         key_char = text_key[i % key_length]
         decrypted_char = chr(ord(char) ^ ord(key_char))
         plain_text += decrypted_char
-    return plain_text[::-1]  # Reverse at the end since encryption was done in reverse
+    return plain_text[::-1]  # Reverse at the end since encryption was reversed at the beginning 
 
 def generator(g, x, p):
     return pow(g, x) % p
@@ -74,9 +74,9 @@ def decode_flag(cipher):
     b = 26
     
     # Regenerate the shared key
-    u = generator(g, a, p)
+    u = generator(g, a, p) # (g^a)%p
     v = generator(g, b, p)
-    key = generator(v, a, p)
+    key = generator(v, a, p) #which would give the same result as generator(u, b, p) i.e. 83
     
     # First decrypt the multiplicative cipher
     semi_cipher = decrypt(cipher, key)
