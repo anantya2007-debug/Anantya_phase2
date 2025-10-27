@@ -27,12 +27,23 @@ I then tried changing the height, which then gave me the flag.
 
 ## Flag:
 ```
-picoCTF{beep_boop_im_in_space}
+picoCTF{qu1t3_a_v13w_2020}
 ```
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
 - [https://stackoverflow.com/questions/71812494/how-should-bmp-header-look-like](url)
+
+## Concepts learnt:
+Byte 14-17: Info header size (always 40 i.e 28 00 00 00)
+
+Byte 18-21: Image width
+
+Byte 22-25: Image height
+
+Byte 26-27: Color planes (always 1)
+
+Byte 28-29: Bits per pixel
 
 # 3. m00nwalk
 
