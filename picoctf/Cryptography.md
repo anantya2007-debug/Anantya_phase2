@@ -33,8 +33,14 @@ The encryption consisted of
 
 ### Shared lock (Diffie-Hellman formula)
 This is essentially creating two keys for a and b in such a way that they open the same lock (i.e. Diffie-Hellman formula)
-Here, by using the public numbers ```g``` and ```p```, the private numbers ```a``` and ```b``` are connected to make a secret common key which in this case is 83.
+Here, by using the public numbers ```g``` and ```p```, the private numbers ```a``` and ```b``` are connected to make a secret common key, which in this case is 83.
 <img width="677" height="161" alt="Screenshot 2025-10-27 at 9 05 45 PM" src="https://github.com/user-attachments/assets/bc8559bb-08a4-4877-81fd-06134b72e137" />
+
+### A multiplication lock
+In the encoded code, the line is ```cipher.append(((ord(char) * key*311)))```. Thus, to reverse this, I used ```char_val = num // (key * 311)``` to undo the multiplication lock. 
+
+### XOR + reversal lock
+Since XOR is a reversible operation, I just applied the same thing again 
 
 
 ```bash
