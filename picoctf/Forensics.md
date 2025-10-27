@@ -13,10 +13,8 @@ Using an online SSTV decoder [https://sstv-decoder.mathieurenaud.fr/](url), I wa
 
 ## Flag:
 ```
-
+picoCTF{beep_boop_im_in_space}
 ```
 
-## Concepts learnt:
-
-
 ## Resources:
+- [https://en.wikipedia.org/wiki/Apollo_11_missing_tapes](url)
