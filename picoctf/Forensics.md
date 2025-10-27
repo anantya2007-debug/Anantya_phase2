@@ -7,6 +7,15 @@ Hint: Weird that it won't display right...
 I first viewed the file in hex format using [https://hexed.it/](url). On opening, it looked something like this. 
 <img width="1512" height="982" alt="Screenshot 2025-10-27 at 5 46 55 PM" src="https://github.com/user-attachments/assets/345412cd-97d8-4fd4-aad0-9ec437f699f7" />
 
+I searched up the hex file format and got this.
+<img width="549" height="203" alt="Screenshot 2025-10-27 at 6 12 15 PM" src="https://github.com/user-attachments/assets/36e69fc4-291d-41ed-8574-27468839fb0d" />
+
+
+
+
+
+## Resources:
+- [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
 
 # 3. m00nwalk
 
@@ -28,3 +37,6 @@ picoCTF{beep_boop_im_in_space}
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/Apollo_11_missing_tapes](url)
+
+## Concepts learnt: 
+- how sstv detetors work 
