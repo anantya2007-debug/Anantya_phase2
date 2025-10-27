@@ -99,3 +99,6 @@ print(f"Decoded flag: {flag}")
 picoCTF{custom_d2cr0pt6d_019c831c}
 ```
 
+## Resources
+- [https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/](url)
+
