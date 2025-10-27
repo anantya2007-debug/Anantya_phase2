@@ -7,7 +7,7 @@ From the hint "How did pictures from the moon landing get sent back to Earth?", 
 
 Using an online SSTV decoder [https://sstv-decoder.mathieurenaud.fr/](url), I was able to get an image from the provided wav file.
 
-<img width="873" height="697" alt="Screenshot 2025-10-27 at 1 20 29 PM" src="https://github.com/user-attachments/assets/2f0b2864-07b1-44d3-94f3-3a1b0edf22bd" />
+<img width="773" height="597" alt="Screenshot 2025-10-27 at 1 20 29 PM" src="https://github.com/user-attachments/assets/2f0b2864-07b1-44d3-94f3-3a1b0edf22bd" />
 
 
 
