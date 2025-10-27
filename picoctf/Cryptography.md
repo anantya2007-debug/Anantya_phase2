@@ -105,8 +105,8 @@ picoCTF{custom_d2cr0pt6d_019c831c}
 
 # 3. Mini RSA
 
-What happens if you have a small exponent? There is a twist though, we padded the plaintext so that (M ** e) is just barely larger than N. Let's decrypt this: ciphertext
+What happens if you have a small exponent? There is a twist, though, we padded the plaintext so that (M ** e) is just barely larger than N. Let's decrypt this: ciphertext
 
 ## Resources:
--[https://en.wikipedia.org/wiki/RSA_cryptosystem](url)
+- [https://en.wikipedia.org/wiki/RSA_cryptosystem](url)
 
