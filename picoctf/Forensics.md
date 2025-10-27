@@ -6,7 +6,9 @@ Decode this message from the moon.
 From the hint "How did pictures from the moon landing get sent back to Earth?", I was able to find that the pictures from the moon landing were sent in the form of SSTV (slow-scan television) transmissions. 
 
 Using an online SSTV decoder [https://sstv-decoder.mathieurenaud.fr/](url), I was able to get an image from the provided wav file.
-<img width="320" height="256" alt="decoded-image" src="https://github.com/user-attachments/assets/b981b418-37cd-4f1f-b6c5-409a35a988a5" />
+
+<img width="873" height="697" alt="Screenshot 2025-10-27 at 1 20 29 PM" src="https://github.com/user-attachments/assets/2f0b2864-07b1-44d3-94f3-3a1b0edf22bd" />
+
 
 
 ## Flag:
