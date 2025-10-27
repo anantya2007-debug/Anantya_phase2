@@ -25,6 +25,10 @@ I then tried changing the height, which then gave me the flag.
 
 <img width="1086" height="405" alt="Screenshot 2025-10-27 at 6 55 26 PM" src="https://github.com/user-attachments/assets/1cdf82fe-4c70-452b-8953-b166aaa386cf" />
 
+## Flag:
+```
+picoCTF{beep_boop_im_in_space}
+```
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
