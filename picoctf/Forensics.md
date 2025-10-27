@@ -17,7 +17,9 @@ I realized then that I had to change the header to make it ```28 00 00 00``` aft
 
 ![tunn3l_v1s10n](https://github.com/user-attachments/assets/fdae12cc-7320-4c3a-9656-f832f7088b8a)
 
-
+This seemed to be only a part of the picture, so I tried increasing the width and height of the picture. 
+By changing the width, the picture got messed up, so I changed it back to the original. 
+<img width="1131" height="332" alt="Screenshot 2025-10-27 at 6 51 13 PM" src="https://github.com/user-attachments/assets/f5ca0c48-796e-4dd1-89dd-7d2809122052" />
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
