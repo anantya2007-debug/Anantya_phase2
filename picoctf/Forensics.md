@@ -10,12 +10,18 @@ I first viewed the file in hex format using [https://hexed.it/](url). On opening
 I searched up the hex file format and got this.
 <img width="549" height="203" alt="Screenshot 2025-10-27 at 6 12 15 PM" src="https://github.com/user-attachments/assets/36e69fc4-291d-41ed-8574-27468839fb0d" />
 
+When I first tried opening the hex as a png file, it said there was an error, so I tried comparing it to the hex of an already existing picture. 
+I realized then that I had to change the header to make it ```28 00 00 00``` after which, when downloading the picture, I got a fake flag. 
 
+<img width="487" height="81" alt="Screenshot 2025-10-27 at 6 47 30 PM" src="https://github.com/user-attachments/assets/f09cd547-71b5-4f48-998a-6b41b90fc2b7" />
+
+![tunn3l_v1s10n](https://github.com/user-attachments/assets/fdae12cc-7320-4c3a-9656-f832f7088b8a)
 
 
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/BMP_file_format#Bitmap_file_header](url)
+- [https://stackoverflow.com/questions/71812494/how-should-bmp-header-look-like](url)
 
 # 3. m00nwalk
 
