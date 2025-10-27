@@ -65,4 +65,4 @@ picoCTF{beep_boop_im_in_space}
 - [https://en.wikipedia.org/wiki/Apollo_11_missing_tapes](url)
 
 ## Concepts learnt: 
-- how sstv detetors work 
+- SSTV uses frequency modulation, in which every different value of brightness in the image gets a different audio frequency
