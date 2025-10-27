@@ -6,7 +6,7 @@ Additional details will be available after launching your challenge instance.
 
 After some intensive reconnaissance, they found out that the bank has an oracle that was used to encrypt the password and can be found here ```nc titan.picoctf.net 61563```. Decrypt the password and use it to decrypt the message. The oracle can decrypt anything except the password.
 
-## Solution
+## Solution:
 
 ## Flag:
 ```
@@ -23,7 +23,7 @@ After some intensive reconnaissance, they found out that the bank has an oracle 
 Can you get a sense of this code file and write the function that will decode the given encrypted file content.
 Find the encrypted file here flag_info and code file might be good to analyze and get the flag.
 
-## Solution
+## Solution:
 
 By analyzing the given encrytion code i tried reversing what had been done to decrypt the code. 
 The encryption consisted of 
@@ -99,7 +99,14 @@ print(f"Decoded flag: {flag}")
 picoCTF{custom_d2cr0pt6d_019c831c}
 ```
 
-## Resources
+## Resources:
 - [https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/](url)
 - [https://www.geeksforgeeks.org/dsa/xor-cipher/](url)
+
+# 3. Mini RSA
+
+What happens if you have a small exponent? There is a twist though, we padded the plaintext so that (M ** e) is just barely larger than N. Let's decrypt this: ciphertext
+
+## Resources:
+-[https://en.wikipedia.org/wiki/RSA_cryptosystem](url)
 
