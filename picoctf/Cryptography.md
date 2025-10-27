@@ -25,6 +25,18 @@ Find the encrypted file here flag_info and code file might be good to analyze an
 
 ## Solution
 
+By analyzing the given encrytion code i tried reversing what had been done to decrypt the code. 
+The encryption consisted of 
+1. Shared lock (Diffie-Hellman formula)
+2. A multiplication lock
+3. XOR + reversal lock
+
+### Shared lock (Diffie-Hellman formula)
+This is essentially creating two keys for a and b in such a way that they open the same lock (i.e. Diffie-Hellman formula)
+Here, by using the public numbers ```g``` and ```p```, the private numbers ```a``` and ```b``` are connected to make a secret common key which in this case is 83.
+<img width="677" height="161" alt="Screenshot 2025-10-27 at 9 05 45 PM" src="https://github.com/user-attachments/assets/bc8559bb-08a4-4877-81fd-06134b72e137" />
+
+
 ```bash
  def decrypt(cipher, key):
     plaintext = ""
