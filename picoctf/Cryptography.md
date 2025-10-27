@@ -101,4 +101,5 @@ picoCTF{custom_d2cr0pt6d_019c831c}
 
 ## Resources
 - [https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/](url)
+- [https://www.geeksforgeeks.org/dsa/xor-cipher/](url)
 
