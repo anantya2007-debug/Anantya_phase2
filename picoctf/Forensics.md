@@ -8,7 +8,8 @@ I opened the file using Wireshark and saw this
 <img width="1512" height="982" alt="Screenshot 2025-10-28 at 11 49 01 AM" src="https://github.com/user-attachments/assets/bb975a8b-7aab-430a-9c0f-f0e869ce11f3" />
 
 I searched up ```tftp.type``` and found this
-<img width="1512" height="982" alt="Screenshot 2025-10-28 at 11 51 03 AM" src="https://github.com/user-attachments/assets/8f25e66f-7e72-4f0b-94a9-bc2ffc998720" />
+
+<img width="1512" height="982" alt="Screenshot 2025-10-28 at 12 42 51 PM" src="https://github.com/user-attachments/assets/2786d98a-80d9-4456-b61e-a4802fffee52" />
 
 I opened the File and exported the object as TFTP. When I opened the file, I got this from it. 
 ```GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA```
