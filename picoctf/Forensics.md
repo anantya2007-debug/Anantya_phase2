@@ -1,3 +1,13 @@
+# 1. trivial flag transfer protocol
+
+Figure out how they moved the flag.
+
+## Solution:
+
+I opened the file using Wireshark and saw this
+<img width="1512" height="982" alt="Screenshot 2025-10-28 at 11 49 01 AM" src="https://github.com/user-attachments/assets/bb975a8b-7aab-430a-9c0f-f0e869ce11f3" />
+
+
 # 2. tunn3l v1s10n
 
 We found this file. Recover the flag.
