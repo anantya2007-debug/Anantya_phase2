@@ -19,9 +19,13 @@ Using a rot13 decoder, I got the following output.
 
 I repeated the same steps for the ```plan``` file and got ```VHFRQGURCEBTENZNAQUVQVGJVGU-QHRQVYVTRAPR.PURPXBHGGURCUBGBF``` which on decoding gave ```IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS```
 
-From this i realised that the hint was in one of the picture files so i used ```https://futureboy.us/stegano/decode.pl``` and the password ```DUEDILIGENCE``` to see if the flag was in one of the three pictures. 
+From this, I realized that the hint was in one of the picture files, so I used [https://futureboy.us/stegano/decode.pl](url) and the password ```DUEDILIGENCE``` to see if the flag was in one of the three pictures. 
+
 
 The third picture ended up having the flag.
+
+<img width="1509" height="939" alt="Screenshot 2025-10-28 at 12 45 54 PM" src="https://github.com/user-attachments/assets/9b07851d-7a64-40ad-b84f-4700e23772a6" />
+
 
 ## Flag:
 ```
