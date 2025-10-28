@@ -13,6 +13,16 @@ I searched up ```tftp.type``` and found this
 I opened the File and exported the object as TFTP. When I opened the file, I got this from it. 
 ```GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA```
 
+Using a rot13 decoder, I got the following output.
+```TFTPDOESNTENCRYPTOURTRAFFICSOWEMUSTDISGUISEOURFLAGTRANSFER.FIGUREOUTAWAYTOHIDETHEFLAGANDIWILLCHECKBACKFORTHEPLAN```
+
+I repeated the same steps for the ```plan``` file and got ```VHFRQGURCEBTENZNAQUVQVGJVGU-QHRQVYVTRAPR.PURPXBHGGURCUBGBF``` which on decoding gave ```IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS```
+
+
+
+## Resources:
+- [https://samelsaid.medium.com/encryption-base64-and-rot13-4a86b4a19cd5](url)
+
 
 # 2. tunn3l v1s10n
 
