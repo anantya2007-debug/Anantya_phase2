@@ -1,3 +1,34 @@
+# 1. GDB baby step 1
+
+Can you figure out what is in the eax register at the end of the main function? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}.
+Disassemble this.
+
+## Solution:
+
+The question says that we have to find the value stored in the EAX register at the end of the main function in order to get the flag. 
+
+- After installing GDB, I had to run ```gdb ./debugger0_a``` to start the debugger program. 
+- I ran ```info functions``` to list the names and data types of all defined functions from which I could confirm that the main function existed.
+- I used ```set disassembly-flavor intel``` to change the syntax to intel style because that was the style that most of the reference websites used and seemed the most convenient to use
+- ```disassemble main``` was used to disassemble the main function from which I say the value in eax to be ```0x86342```
+  
+<img width="473" height="150" alt="Screenshot 2025-10-28 at 10 16 54 AM" src="https://github.com/user-attachments/assets/563ec276-9eae-414f-9c52-6313a26a54af" />
+
+I then converted the hex to decimal and got the number ```549698``` which I put in ```picoCTF{}``` to get the flag. 
+
+## Flag:
+```
+picoCTF{549698}
+```
+
+## Concepts learnt:
+- The EAX register is the 32-bit accumulator register in x86 architecture, primarily used for storing the results of arithmetic operations and holding the return values of functions
+
+## Notes:
+- When using the ```gdb ./debugger0_a```I had to mention the specific path to the file, otherwise it was not recognizing the file.
+- I had to change the current directory to my downloads ```cd ~/Downloads```
+- I then used ```ls -la debugger0_a``` to confirm the file was in the directory, after which I could start disassembling.
+
 # 2. ARMssembly 1
 
 For what argument does this program print `win` with variables 58, 2 and 3? File: chall_1.S Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
