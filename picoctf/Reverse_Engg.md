@@ -29,6 +29,11 @@ picoCTF{549698}
 - I had to change the current directory to my downloads ```cd ~/Downloads```
 - I then used ```ls -la debugger0_a``` to confirm the file was in the directory, after which I could start disassembling.
 
+## Resources:
+- [https://visualgdb.com/gdbreference/commands/info_functions](url)
+- [https://visualgdb.com/gdbreference/commands/set_disassembly-flavor](url)
+- [https://visualgdb.com/gdbreference/commands/disassemble](url)
+
 # 2. ARMssembly 1
 
 For what argument does this program print `win` with variables 58, 2 and 3? File: chall_1.S Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
