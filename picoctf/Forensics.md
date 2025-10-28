@@ -19,7 +19,14 @@ Using a rot13 decoder, I got the following output.
 
 I repeated the same steps for the ```plan``` file and got ```VHFRQGURCEBTENZNAQUVQVGJVGU-QHRQVYVTRAPR.PURPXBHGGURCUBGBF``` which on decoding gave ```IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS```
 
+From this i realised that the hint was in one of the picture files so i used ```https://futureboy.us/stegano/decode.pl``` and the password ```DUEDILIGENCE``` to see if the flag was in one of the three pictures. 
 
+The third picture ended up having the flag.
+
+## Flag:
+```
+picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
+```
 
 ## Resources:
 - [https://samelsaid.medium.com/encryption-base64-and-rot13-4a86b4a19cd5](url)
