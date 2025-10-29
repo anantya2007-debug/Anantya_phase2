@@ -119,14 +119,15 @@ In order to reverse this, I had to cube root the given number.
 
 ```bash
 c=2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125 
-x = 1 << ((c.bit_length() + 2)//3)  # basically x=2^((c.bit_length() + 2)//3)       
+x = 1 << (c.bit_length()//3)  # the cube root of a number with length n will have n/3 no. of digits         
 while True:
-   y = (2*x + c//(x*x)) // 3
+   y = (2*x + c//(x*x)) // 3 # Newton's Method for iterative algorithm for finding roots
    if y >= x:
        m = x; break
    x = y
-plaintext = m.to_bytes((m.bit_length()+7)//8, 'big') #converts number back to text 
-print(plaintext.decode())
+plaintext = m.to_bytes((m.bit_length()+7)//8, 'big') # algorithm to convert int to bytes
+print(plaintext.decode()) # convert bytes to string
+
 ```
 
 ## Flag:
