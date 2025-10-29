@@ -8,9 +8,13 @@ After some intensive reconnaissance, they found out that the bank has an oracle 
 
 ## Solution:
 
+After I found the key, I put the following command into my terminal as mentioned in the hints, and then got the flag.
+<img width="695" height="68" alt="Screenshot 2025-10-29 at 10 01 42 PM" src="https://github.com/user-attachments/assets/eed1673b-a395-4fc5-a8b5-d86818b32552" />
+
+
 ## Flag:
 ```
-
+picoCTF{su((3ss_(r@ck1ng_r3@_da099d93}
 ```
 
 ## Concepts learnt:
