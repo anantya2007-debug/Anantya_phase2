@@ -109,6 +109,10 @@ Let's decrypt this: ciphertext? Something seems a bit small.
 
 ## Solution:
 
+From the given data, it is seen that the giant number is the output of the input flag cubed, i.e., (flag)^3=giant number.
+
+In order to reverse this, I had to cube root the given number.
+
 ```bash
 c=2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125 
 x = 1 << ((c.bit_length() + 2)//3)          
