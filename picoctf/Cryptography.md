@@ -115,13 +115,13 @@ In order to reverse this, I had to cube root the given number.
 
 ```bash
 c=2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125 
-x = 1 << ((c.bit_length() + 2)//3)  # i.e. 2^((c.bit_length() + 2)//3)       
+x = 1 << ((c.bit_length() + 2)//3)  # basically x=2^((c.bit_length() + 2)//3)       
 while True:
    y = (2*x + c//(x*x)) // 3
    if y >= x:
        m = x; break
    x = y
-plaintext = m.to_bytes((m.bit_length()+7)//8, 'big')
+plaintext = m.to_bytes((m.bit_length()+7)//8, 'big') #converts number back to text 
 print(plaintext.decode())
 ```
 
@@ -132,4 +132,5 @@ picoCTF{n33d_a_lArg3r_e_606ce004}
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/RSA_cryptosystem](url)
+- [https://crypto.stackexchange.com/questions/33561/cube-root-attack-rsa-with-low-exponent](url)
 
