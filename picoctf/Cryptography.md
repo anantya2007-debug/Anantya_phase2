@@ -113,6 +113,8 @@ Let's decrypt this: ciphertext? Something seems a bit small.
 
 ## Solution:
 
+The given N was too big, e too small, and c too small, so in the general formula ```c^e mod N``` we can ignore ```N``` and replace ```e``` with 3.
+
 From the given data, it is seen that the giant number is the output of the input flag cubed (after the flag is turned into a number), i.e., (flag)^3=giant number.
 
 In order to reverse this, I had to cube root the given number.
