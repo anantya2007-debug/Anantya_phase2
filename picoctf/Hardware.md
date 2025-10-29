@@ -28,3 +28,24 @@ In order to figure out if the values of x0, x1..., x35, started from MSB or the 
 
 ![WhatsApp Image 2025-10-25 at 17 42 57 (1)](https://github.com/user-attachments/assets/f6996a80-7a60-4650-bb63-173a65ca3943)
 
+
+# I like Logic 
+I like logic and I like files, apparently, they have something in common. What should my next step be?
+
+## Solution:
+When I opened the file given by them, I saw that it was a ```.json``` so i used ```Logic2``` to analyse the files inside the json. I saved the file as .SAL and when i opened it i saw that only 'channel 3' out of the 5 channels had a square wave. 
+
+I used the Async Serial analyzer and changed the baud to different standard values. Using trial and error I got the value to be 9600 and saw the following. 
+
+<img width="1512" height="982" alt="Screenshot 2025-10-29 at 11 59 07 PM" src="https://github.com/user-attachments/assets/a752ebb2-eafb-469b-9647-93fa03300fd6" />
+
+<img width="1512" height="982" alt="Screenshot 2025-10-29 at 11 58 52 PM" src="https://github.com/user-attachments/assets/1cf89904-a6bc-414a-aa48-dab82b3c40da" />
+
+I searched for curly brackets and then found the flag. 
+
+## Flag:
+```
+FCSC{b1dee4eeadf6c4e60aeb142b0b486344e64b12b40d1046de95c89ba5e23a9925}
+```
+
+
