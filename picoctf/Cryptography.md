@@ -105,7 +105,26 @@ picoCTF{custom_d2cr0pt6d_019c831c}
 
 # 3. Mini RSA
 
-What happens if you have a small exponent? There is a twist, though, we padded the plaintext so that (M ** e) is just barely larger than N. Let's decrypt this: ciphertext
+Let's decrypt this: ciphertext? Something seems a bit small.
+
+## Solution:
+
+```bash
+c=2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125 
+x = 1 << ((c.bit_length() + 2)//3)          
+while True:
+   y = (2*x + c//(x*x)) // 3
+   if y >= x:
+       m = x; break
+   x = y
+plaintext = m.to_bytes((m.bit_length()+7)//8, 'big')
+print(plaintext.decode())
+```
+
+## Flag:
+```
+picoCTF{n33d_a_lArg3r_e_606ce004}
+```
 
 ## Resources:
 - [https://en.wikipedia.org/wiki/RSA_cryptosystem](url)
