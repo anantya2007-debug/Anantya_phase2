@@ -48,7 +48,7 @@ I searched for curly brackets and then found the flag.
 FCSC{b1dee4eeadf6c4e60aeb142b0b486344e64b12b40d1046de95c89ba5e23a9925}
 ```
 
-# Bare Metal Alchemist 
+# 3. Bare Metal Alchemist 
 My friend recommended me this anime but i think i've heard a wrong name.
 
 ## Solution:
