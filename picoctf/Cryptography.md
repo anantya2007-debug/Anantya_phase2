@@ -7,6 +7,40 @@ Additional details will be available after launching your challenge instance.
 After some intensive reconnaissance, they found out that the bank has an oracle that was used to encrypt the password and can be found here ```nc titan.picoctf.net 61563```. Decrypt the password and use it to decrypt the message. The oracle can decrypt anything except the password.
 
 ## Solution:
+I first tried to directly decrypt the password using the given oracle but obvisouly that didnt work so i realised that i had to indirectly get the oracle to decrypt my password. 
+I used the below code to get the password.
+
+```bash
+from subprocess import run, PIPE  
+  
+# password that is encrypted by RSA
+c = 4228273471152570993857755209040611143227336245190875847649142807501848960847851973658239485570030833999780269457000091948785164374915942471027917017922546
+  
+print("Phase 1: Get password\n")  
+  
+print(f"c = {c}\n")  
+ 
+# Get message from user
+m1 = input("Enter message (m1): ")  
+m1_bytes = bytes(m1, "utf-8")  # converting a string into a sequence of bytes using UTF-8 encoding
+m1_int = ord(m1_bytes) #returns int value of first byte 
+  
+print(f"Have the oracle encrypt this message (m1): {m1}\n")  
+c1 = int(input("Enter ciphertext from oracle (c1 = E(m1)): "))  # encrypted message from oracle 
+print("\n")
+
+# The homomorphic property which is basically when the mathematical operations on ciphertexts correspond to operations on plaintexts
+c2 = c * c1 # essentially just E(m) * E(m1) = E(m * m1)
+print(f"Have the oracle decrypt this message (c2 = c * c1): {c2}\n") # will give c2 = E(m) * E(m1) = E(m * m1)
+
+m2 = int(input("Enter decrypted ciphertext as HEX (m2 = D(c2): "), 16) # will give  m2 = D(c2) = D(E(m * m1)) = m * m1 but the m we get here will be the decrypted version 
+print("\n")
+ 
+m_int = m2 // m1_int  # to find password m we just use m = m2 / m1
+m = m_int.to_bytes(len(str(m_int)), "big").decode("utf-8").lstrip("\x00") # converting numerical result back to text
+print(f"Password (m = m2 / m1): {m}\n")  
+
+```
 
 After I found the key, I put the following command into my terminal as mentioned in the hints, and then got the flag.
 <img width="695" height="68" alt="Screenshot 2025-10-29 at 10 01 42 PM" src="https://github.com/user-attachments/assets/eed1673b-a395-4fc5-a8b5-d86818b32552" />
@@ -18,6 +52,7 @@ picoCTF{su((3ss_(r@ck1ng_r3@_da099d93}
 ```
 
 ## Concepts learnt:
+- RSA has homomorphic properties, which is basically when the mathematical operations on ciphertexts correspond to operations on plaintexts
 
 
 ## Resources:
