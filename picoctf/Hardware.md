@@ -61,4 +61,31 @@ It gave me something like this.
 I saw that ```eor``` was in the name of the registers, which indicated the XOR operation. 
 <img width="421" height="72" alt="Screenshot 2025-10-30 at 6 58 20 PM" src="https://github.com/user-attachments/assets/da3e8ad7-80ba-4c1b-be36-a09d11db0c82" />
 
+In the next line ```	cpi	r24, 0xA5``` it can be seen that they are comparing the register r24 to 0xA5 so i assumed the XOR key to be ```0xA5```. 
+
+I took the bytes starting from position 0x68 till 0x92 and put them as a list in my XOR code below. 
+
+```bash
+encoded_data = [
+    0xf1, 0xe3, 0xe6, 0xe6, 0xf1, 0xe3, 0xde, 0xf1, 0xcd, 0x94, 0xd6, 0xfa,
+    0x94, 0xd6, 0xfa, 0xd6, 0xca, 0xc8, 0x96, 0xfa, 0xd6, 0x94, 0xc8, 0xd5,
+    0xc9, 0x96, 0xfa, 0x91, 0xd7, 0xc1, 0xd0, 0x94, 0xcb, 0xca, 0xfa, 0xc3,
+    0x94, 0xd7, 0xc8, 0xd2, 0x91, 0xd7, 0xc0, 0xd8
+]
+
+key = 0xA5
+
+decoded = bytes([byte ^ key for byte in encoded_data])
+print("Decoded data:", decoded)
+```
+This gave me the following output. 
+```
+Decoded data: b'TFCCTF{Th1s_1s_som3_s1mpl3_4rdu1no_f1rmw4re}'
+```
+From which I got the flag. 
+
+## Flag:
+```
+TFCCTF{Th1s_1s_som3_s1mpl3_4rdu1no_f1rmw4re}
+```
 
