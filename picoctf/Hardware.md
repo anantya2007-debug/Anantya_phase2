@@ -29,7 +29,7 @@ In order to figure out if the values of x0, x1..., x35, started from MSB or the 
 ![WhatsApp Image 2025-10-25 at 17 42 57 (1)](https://github.com/user-attachments/assets/f6996a80-7a60-4650-bb63-173a65ca3943)
 
 
-# I like Logic 
+# 2. I like Logic 
 I like logic and I like files, apparently, they have something in common. What should my next step be?
 
 ## Solution:
