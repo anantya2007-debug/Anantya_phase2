@@ -48,4 +48,17 @@ I searched for curly brackets and then found the flag.
 FCSC{b1dee4eeadf6c4e60aeb142b0b486344e64b12b40d1046de95c89ba5e23a9925}
 ```
 
+# Bare Metal Alchemist 
+My friend recommended me this anime but i think i've heard a wrong name.
+
+## Solution:
+
+I first had to install AVR and its tools.
+I then used the command ```avr-objdump -m avr -D ./firmware.elf``` to disassemble the file. 
+It gave me something like this. 
+<img width="1512" height="982" alt="Screenshot 2025-10-30 at 6 53 30 PM" src="https://github.com/user-attachments/assets/b5c59356-a7c7-4587-8b3c-f6fa2eedb07c" />
+
+I saw that ```eor``` was in the name of the registers, which indicated the XOR operation. 
+<img width="421" height="72" alt="Screenshot 2025-10-30 at 6 58 20 PM" src="https://github.com/user-attachments/assets/da3e8ad7-80ba-4c1b-be36-a09d11db0c82" />
+
 
