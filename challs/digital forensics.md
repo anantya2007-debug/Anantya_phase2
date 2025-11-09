@@ -25,3 +25,44 @@ nite{h1d3_4nd_s33k_but_w1th_st3g_sdfu9s8}
 ## Concpets learnt:
 - Stegseek uses a ```rockyou.txt``` wordlist if no other wordlist is specified (which was the case here)
 
+# Nutrela Chunks
+One of my favorite foods is soya chunks. But as I was enjoying some Nutrela today, I noticed a few chunks weren’t quite right. Seems like something’s off with their structure. Could you help me fix these broken chunks so I can enjoy my meal again?
+
+## Solution 
+I first tried opening the file but it wasn't working. I tried looking into the file info but the original was a .png so i realised there was probably something wrong with the hex. 
+I used [https://hexed.it/](url) to look into the .png and analysed the chunks and the header magic number to see if there was anything unusual. 
+
+I also used ```pngcheck``` to see what was wrong with the file. 
+<img width="482" height="50" alt="1" src="https://github.com/user-attachments/assets/308b6a44-b139-4ca0-8c00-72f9b9c34e7d" />
+This was how I knew I had to further analyse the chunks. 
+
+- First, I changed the magic number(header) to that of .png type ```89 50 4e 47 0d 0a 1a 0a```
+  
+<img width="442" height="43" alt="2" src="https://github.com/user-attachments/assets/7253ff07-fbf5-41c6-9821-681b75aedfa1" />
+
+- Then I found that the IHDR chunk should be ```49 48 44 52```, not ```69 68 64 72```
+
+  <img width="447" height="59" alt="3" src="https://github.com/user-attachments/assets/7d76a1e7-ca55-4374-98d5-335c72de0e87" />
+
+
+- Then I found that the IDAT chunk should be ```49 44 41 54```, not ```69 64 61 74```
+
+<img width="442" height="35" alt="4" src="https://github.com/user-attachments/assets/d26579b6-a1db-4fa9-bbb1-f8b308d6d165" />
+
+- Then I found that the IEND chunk should be ```49 45 4E 44```, not ```69 65 6E 64```
+
+  <img width="462" height="39" alt="5" src="https://github.com/user-attachments/assets/9b0edf26-2bad-4700-8181-66c8a071803c" />
+
+- Finally the .png file could be opened from which I retrieved the flag
+
+  <img width="944" height="945" alt="Screenshot 2025-11-10 at 12 20 04 AM" src="https://github.com/user-attachments/assets/4dc2ed1c-9e86-4020-b627-0151f8632ff3" />
+
+## Flag:
+```
+nite{nOw_yOu_knOw_abOut_PNG_chunk5}
+```
+
+## Resources:
+- [https://medium.com/@0xwan/png-structure-for-beginner-8363ce2a9f73](url)
+- [https://en.wikipedia.org/wiki/PNG](url)
+
