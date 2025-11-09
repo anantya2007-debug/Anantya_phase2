@@ -23,5 +23,5 @@ nite{h1d3_4nd_s33k_but_w1th_st3g_sdfu9s8}
 - [https://www.youtube.com/watch?v=L_dKHVxerVo](url)
 
 ## Concpets learnt:
-- Stegseek uses a ```rockyou.txt``` wordlist if no other wordlist is specified which was the case here 
+- Stegseek uses a ```rockyou.txt``` wordlist if no other wordlist is specified, which was the case here.
 
