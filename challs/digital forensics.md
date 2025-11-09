@@ -66,3 +66,6 @@ nite{nOw_yOu_knOw_abOut_PNG_chunk5}
 - [https://medium.com/@0xwan/png-structure-for-beginner-8363ce2a9f73](url)
 - [https://en.wikipedia.org/wiki/PNG](url)
 
+## Concpets learnt:
+- Basically the whole reason the thing file was corrupt was because the chunk names were in lowercase when they should actually be in uppercase 
+
