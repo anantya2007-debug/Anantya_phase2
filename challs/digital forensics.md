@@ -69,3 +69,34 @@ nite{nOw_yOu_knOw_abOut_PNG_chunk5}
 ## Concpets learnt:
 - Basically the whole reason the thing file was corrupt was because the chunk names were in lowercase when they should actually be in uppercase 
 
+#  RAR of the Abyss
+Two philosophers peer into the networked abyss and swap a secret. Use the secret to decrypt the Abyss’ RAwR and pull your flag from the void.
+
+## Solution:
+
+I first downloaded the file given and used Wireshark to analyze it. 
+I opened the protocol hierarchy in statistics to see what all protocols were in the capture and saw this.
+
+<img width="766" height="629" alt="Screenshot 2025-11-21 at 4 06 31 PM" src="https://github.com/user-attachments/assets/b4a9977b-7dab-40b4-8cb3-437540599ad5" />
+
+This showed that TCP had a larger percentage of packages, so I researched more about TCP and then applied `tcp` as a filter to see what would show up. There were quite a few results, so I needed to reduce the number of packets I had to search through.
+
+I used `tcp.len > 0` to get rid of the empty packets, and got 6 results from which only one seemed like it could be a rawr file. 
+<img width="589" height="531" alt="Screenshot 2025-11-21 at 4 14 57 PM" src="https://github.com/user-attachments/assets/ccce0d0e-83f3-43f2-986a-c81c183a1d1f" />
+
+I also got a password from another one of the packets, which was `b3y0ndG00dand3vil`.
+<img width="594" height="538" alt="Screenshot 2025-11-21 at 4 16 34 PM" src="https://github.com/user-attachments/assets/8bc52c7a-87a0-4f61-975b-81a947a445fb" />
+
+I then saved the rawr file by following the TCP stream and then used `unar -p b3y0ndG00dand3vil abyss.rar` to get the flag. 
+<img width="540" height="89" alt="Screenshot 2025-11-21 at 4 20 32 PM" src="https://github.com/user-attachments/assets/bfa27917-9a49-4a3c-b1f1-916415723311" />
+
+## Flag:
+```
+nite{thus_sp0k3_th3_n3tw0rk_f0r3ns1cs_4n4lyst}
+```
+
+## Resources: 
+- [https://www.mankier.com/1/unar](url)
+- [https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html](url)
+- [https://www.geeksforgeeks.org/ethical-hacking/tcp-analysis-using-wireshark/](url)
+- [https://techcommunity.microsoft.com/discussions/windowsinsiderprogram/how-do-i-easily-extract-rar-files-on-mac/4389894](url)
