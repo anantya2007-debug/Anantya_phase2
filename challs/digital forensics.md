@@ -102,4 +102,12 @@ nite{thus_sp0k3_th3_n3tw0rk_f0r3ns1cs_4n4lyst}
 - [https://techcommunity.microsoft.com/discussions/windowsinsiderprogram/how-do-i-easily-extract-rar-files-on-mac/4389894](url)
 
 ## Concepts learnt:
-- I learnt about TCP and how you can use `unar` to extract info from files like RAR files, ZIP files, etc.  
+- I learnt about TCP and how you can use `unar` to extract info from files like RAR files, ZIP files, etc.
+
+# NineTails 
+Looks like I got a little too clever and hid the flag as a password in Firefox, tucked away like one of NineTails’ many tails. Recover the "logins" and the "key4" and let it guide you to the flag.
+
+Hint:
+I named my Ninetails "j4gjesg4", quite a peculiar name, isn't it?
+
+## Solution: 
