@@ -131,4 +131,24 @@ Learn up on volatility 2 and its various plugins and what they are used for.
 I downloaded Volatility 2 through Docker. I used the `volatility --help` command to see the supported plugin commands and used the following command to see which version of Windows the memory dump was taken from. 
 <img width="1263" height="242" alt="Screenshot 2025-11-28 at 5 21 08 PM" src="https://github.com/user-attachments/assets/4300316c-ca9e-45d5-8819-fbfc76cc67c9" />
 
+I then checked the list of running processes. 
+
+<img width="1091" height="758" alt="Screenshot 2025-11-29 at 6 07 26 PM" src="https://github.com/user-attachments/assets/6ee27491-2d8b-41c4-83df-406d7cb6df6f" />
+
+There were no drawing related processes so i tried identifying the hidden processes and found `mspaint.exe `
+
+<img width="1111" height="748" alt="Screenshot 2025-11-29 at 6 10 17 PM" src="https://github.com/user-attachments/assets/f5f8fc6a-8c24-48fe-950d-55867f28736a" />
+
+I used the console plugin to see the command history and found this. 
+<img width="1092" height="752" alt="Screenshot 2025-11-29 at 6 22 01 PM" src="https://github.com/user-attachments/assets/603a9cbc-9eb0-4a4b-94fd-33409da6b27b" />
+
+I saw that there were mentions of the flags in `cmd.exe` as well as `DumpIt.exe`. 
+In `cmd.exe` there was an encoded text `ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=` which I then decoded to get the flag. 
+
+### Flag 1:
+```
+flag{th1s_1s_th3_1st_st4g3!!}
+```
+
+
 
