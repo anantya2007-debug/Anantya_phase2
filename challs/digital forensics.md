@@ -116,3 +116,19 @@ I named my Ninetails "j4gjesg4", quite a peculiar name, isn't it?
 
 ## Resources:
 - [https://dfir.science/2021/09/What-is-an-AD1.html](url)
+
+# Re:Draw
+Her screen went black and a strange command window flickered to life, lines of text flashed across before everything went silent. Moments later, the system crashed. By sheer luck, we recovered a memory dump. 
+
+Note: There are three stages to this challenge and you will find three flags.
+
+What we know: just before the crash, a black command window flickered across the screen, something in its output might still be visible if you dig through memory. She was drawing when it happened, and remnants of a painting program linger, which could reveal more if inspected in the right way. Finally, a mysterious archive hides deeper in memory, likely holding the last piece of her work.
+
+Hint:
+Learn up on volatility 2 and its various plugins and what they are used for.
+
+## Solution: 
+I downloaded Volatility 2 through Docker. I used the `volatility --help` command to see the supported plugin commands and used the following command to see which version of Windows the memory dump was taken from. 
+<img width="1263" height="242" alt="Screenshot 2025-11-28 at 5 21 08 PM" src="https://github.com/user-attachments/assets/4300316c-ca9e-45d5-8819-fbfc76cc67c9" />
+
+
