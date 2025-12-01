@@ -137,7 +137,8 @@ I then checked the list of running processes.
 
 There were no drawing related processes so i tried identifying the hidden processes and found `mspaint.exe `
 
-<img width="1111" height="748" alt="Screenshot 2025-11-29 at 6 10 17 PM" src="https://github.com/user-attachments/assets/f5f8fc6a-8c24-48fe-950d-55867f28736a" />
+<img width="1312" height="877" alt="Screenshot 2025-12-01 at 5 05 04 PM" src="https://github.com/user-attachments/assets/6fb73b53-986a-49c1-a011-d913b2f2cd25" />
+
 
 I used the console plugin to see the command history and found this. 
 <img width="1092" height="752" alt="Screenshot 2025-11-29 at 6 22 01 PM" src="https://github.com/user-attachments/assets/603a9cbc-9eb0-4a4b-94fd-33409da6b27b" />
