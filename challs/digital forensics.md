@@ -146,20 +146,34 @@ I used the console plugin to see the command history and found this.
 I saw that there were mentions of the flags in `cmd.exe` as well as `DumpIt.exe`. 
 In `cmd.exe` there was an encoded text `ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=` which I then decoded to get the flag. 
 
-I then tried opening a couple of files and found that `WinRAR.exe ` was opening. 
+I then used `volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 iehistory` to see the explorer history from which I found 2 `.rar` files.
+<img width="843" height="369" alt="Screenshot 2025-12-01 at 7 29 13 PM" src="https://github.com/user-attachments/assets/f5042627-58b9-458b-a67f-2307c3f7c449" />
+There are three files of `Important.rar` and `SW1wb3J0YW50.rar` wasn't showing up, so I assumed that it was deleted, maybe?
 
-<img width="1098" height="104" alt="Screenshot 2025-12-01 at 5 10 48 PM" src="https://github.com/user-attachments/assets/a69485c1-af45-4562-b626-aeefb0718091" />
+<img width="1088" height="185" alt="Screenshot 2025-12-01 at 7 32 33 PM" src="https://github.com/user-attachments/assets/237d97f5-42be-4895-8e96-25e09c1c6c2c" />
 
-I first had to search for the `.rar` file in the memory. 
-<img width="1073" height="84" alt="Screenshot 2025-12-01 at 5 21 53 PM" src="https://github.com/user-attachments/assets/a2394fd1-a494-41d1-85bc-421d2fb94c18" />
-I then extracted the file.
+I tried extracting all three of the files but only one was succesfully extracted. 
+<img width="1086" height="196" alt="Screenshot 2025-12-01 at 7 35 27 PM" src="https://github.com/user-attachments/assets/b0e926c0-1f9c-43e4-adbd-57ad35178af0" />
 
-<img width="1121" height="144" alt="Screenshot 2025-12-01 at 5 26 13 PM" src="https://github.com/user-attachments/assets/8a3149be-eae9-403c-89fb-c43907d9b209" />
+I initially tried to use `unrar` but that wasnt working so instead i tried `7zip` and got the following hint for the password. 
+<img width="640" height="538" alt="Screenshot 2025-12-01 at 7 43 04 PM" src="https://github.com/user-attachments/assets/c89f113c-bdd4-4cde-87c7-62afaae9ff2d" />
 
-hi
+I got the NTML hashes from the memory dump. 
+
+<img width="1185" height="127" alt="Screenshot 2025-12-01 at 7 44 30 PM" src="https://github.com/user-attachments/assets/943c2411-f7df-4412-bb55-5072ee50d88a" />
+
+Now that i had the password, i could `unar` it.
+
+<img width="730" height="104" alt="Screenshot 2025-12-01 at 7 47 36 PM" src="https://github.com/user-attachments/assets/f7777bfa-1ef6-4618-bed1-d8b8cee00df5" />
+
+I opened `flag3.png` to get the third flag. 
+<img width="352" height="360" alt="Screenshot 2025-12-01 at 7 49 02 PM" src="https://github.com/user-attachments/assets/d21058e2-029f-4181-8abc-d0dd48c68737" />
+
+
 ### Flag 1:
 ```
 flag{th1s_1s_th3_1st_st4g3!!}
+flag{w3ll_3rd_stage_ was_easy}
 ```
 
 
