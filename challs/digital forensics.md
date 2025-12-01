@@ -184,7 +184,7 @@ flag{th1s_1s_th3_1st_st4g3!!}
 ```
 ### Flag 2:
 ```
-flag{G00d_BoY_good_girl_}
+flag{G00d_BoY_good_girl}
 ```
 ### Flag 3:
 ```
