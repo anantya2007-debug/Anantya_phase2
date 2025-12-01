@@ -156,6 +156,7 @@ I then extracted the file.
 
 <img width="1121" height="144" alt="Screenshot 2025-12-01 at 5 26 13 PM" src="https://github.com/user-attachments/assets/8a3149be-eae9-403c-89fb-c43907d9b209" />
 
+hi
 ### Flag 1:
 ```
 flag{th1s_1s_th3_1st_st4g3!!}
