@@ -146,6 +146,14 @@ I used the console plugin to see the command history and found this.
 I saw that there were mentions of the flags in `cmd.exe` as well as `DumpIt.exe`. 
 In `cmd.exe` there was an encoded text `ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=` which I then decoded to get the flag. 
 
+I then tried opening a couple of files and found that `WinRAR.exe ` was opening. 
+
+<img width="1098" height="104" alt="Screenshot 2025-12-01 at 5 10 48 PM" src="https://github.com/user-attachments/assets/a69485c1-af45-4562-b626-aeefb0718091" />
+
+I first had to search for the `.rar` file in the memory. 
+<img width="1073" height="84" alt="Screenshot 2025-12-01 at 5 21 53 PM" src="https://github.com/user-attachments/assets/a2394fd1-a494-41d1-85bc-421d2fb94c18" />
+
+
 ### Flag 1:
 ```
 flag{th1s_1s_th3_1st_st4g3!!}
