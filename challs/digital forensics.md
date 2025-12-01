@@ -149,6 +149,9 @@ In `cmd.exe` there was an encoded text `ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=
 I used `memdump` to look into `mspaint.exe`
 <img width="1080" height="68" alt="Screenshot 2025-12-01 at 8 40 14 PM" src="https://github.com/user-attachments/assets/3fdb019d-b89d-49d9-90bd-f8837848729b" />
 
+I then used `gimp` to look see the image in `.dmp`. I changed the dimensions till I got an image that had the second flag. 
+
+<img width="1512" height="982" alt="Screenshot 2025-12-01 at 8 52 58 PM" src="https://github.com/user-attachments/assets/0163be25-6088-4108-8225-d5dbdc8107be" />
 
 
 I then used `volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 iehistory` to see the explorer history from which I found 2 `.rar` files.
@@ -178,6 +181,10 @@ I opened `flag3.png` to get the third flag.
 ### Flag 1:
 ```
 flag{th1s_1s_th3_1st_st4g3!!}
+```
+### Flag 2:
+```
+flag{G00d_BoY_good_girl}
 ```
 ### Flag 3:
 ```
