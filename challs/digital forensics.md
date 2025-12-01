@@ -152,7 +152,9 @@ I then tried opening a couple of files and found that `WinRAR.exe ` was opening.
 
 I first had to search for the `.rar` file in the memory. 
 <img width="1073" height="84" alt="Screenshot 2025-12-01 at 5 21 53 PM" src="https://github.com/user-attachments/assets/a2394fd1-a494-41d1-85bc-421d2fb94c18" />
+I then extracted the file.
 
+<img width="1121" height="144" alt="Screenshot 2025-12-01 at 5 26 13 PM" src="https://github.com/user-attachments/assets/8a3149be-eae9-403c-89fb-c43907d9b209" />
 
 ### Flag 1:
 ```
