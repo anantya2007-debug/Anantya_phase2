@@ -5,7 +5,7 @@ Hint:
 Even in retirement, Sakamoto never loses at hide and seek. Maybe stegseek can help you keep up.
 
 ## Solution:
-I first installed steghide and stegseek using my terminal. After downloading the ```sakamoto.jpg``` file, I used the following command to see if I could directly extract the text from it wihtout a specific passphrase. 
+I first installed steghide and stegseek using my terminal. After downloading the ```sakamoto.jpg``` file, I used the following command to see if I could directly extract the text from it without a specific passphrase. 
 <img width="516" height="100" alt="Screenshot 2025-11-09 at 11 17 37 PM" src="https://github.com/user-attachments/assets/824025c8-d13e-4ab8-9b30-eb6584bcde38" />
 
 I then used this command to get the passphrase and save the found text in a file called ```cracked.txt```.
@@ -152,17 +152,17 @@ There are three files of `Important.rar` and `SW1wb3J0YW50.rar` wasn't showing u
 
 <img width="1088" height="185" alt="Screenshot 2025-12-01 at 7 32 33 PM" src="https://github.com/user-attachments/assets/237d97f5-42be-4895-8e96-25e09c1c6c2c" />
 
-I tried extracting all three of the files but only one was succesfully extracted. 
+I tried extracting all three of the files, but only one was succesfully extracted. 
 <img width="1086" height="196" alt="Screenshot 2025-12-01 at 7 35 27 PM" src="https://github.com/user-attachments/assets/b0e926c0-1f9c-43e4-adbd-57ad35178af0" />
 
-I initially tried to use `unrar` but that wasnt working so instead i tried `7zip` and got the following hint for the password. 
+I initially tried to use `unrar` but that wasn't working, so instead I tried `7zip` and got the following hint for the password. (unar doesn't show comments, but 7zip does)
 <img width="640" height="538" alt="Screenshot 2025-12-01 at 7 43 04 PM" src="https://github.com/user-attachments/assets/c89f113c-bdd4-4cde-87c7-62afaae9ff2d" />
 
 I got the NTML hashes from the memory dump. 
 
 <img width="1185" height="127" alt="Screenshot 2025-12-01 at 7 44 30 PM" src="https://github.com/user-attachments/assets/943c2411-f7df-4412-bb55-5072ee50d88a" />
 
-Now that i had the password, i could `unar` it.
+Now that I had the password, I could `unar` it.
 
 <img width="730" height="104" alt="Screenshot 2025-12-01 at 7 47 36 PM" src="https://github.com/user-attachments/assets/f7777bfa-1ef6-4618-bed1-d8b8cee00df5" />
 
