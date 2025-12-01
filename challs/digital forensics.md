@@ -173,6 +173,9 @@ I opened `flag3.png` to get the third flag.
 ### Flag 1:
 ```
 flag{th1s_1s_th3_1st_st4g3!!}
+```
+### Flag 3:
+```
 flag{w3ll_3rd_stage_ was_easy}
 ```
 
