@@ -146,6 +146,11 @@ I used the console plugin to see the command history and found this.
 I saw that there were mentions of the flags in `cmd.exe` as well as `DumpIt.exe`. 
 In `cmd.exe` there was an encoded text `ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=` which I then decoded to get the flag. 
 
+I used `memdump` to look into `mspaint.exe`
+<img width="1080" height="68" alt="Screenshot 2025-12-01 at 8 40 14 PM" src="https://github.com/user-attachments/assets/3fdb019d-b89d-49d9-90bd-f8837848729b" />
+
+
+
 I then used `volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 iehistory` to see the explorer history from which I found 2 `.rar` files.
 <img width="843" height="369" alt="Screenshot 2025-12-01 at 7 29 13 PM" src="https://github.com/user-attachments/assets/f5042627-58b9-458b-a67f-2307c3f7c449" />
 There are three files of `Important.rar` and `SW1wb3J0YW50.rar` wasn't showing up, so I assumed that it was deleted, maybe?
