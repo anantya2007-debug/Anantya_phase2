@@ -89,7 +89,7 @@ This worked in the scenario of me wanting to find the secret number, but I also 
 
 <img width="672" height="114" alt="Screenshot 2025-12-04 at 1 43 17 PM" src="https://github.com/user-attachments/assets/539554d8-bf98-4fce-8409-2ff5ea83c4a6" />
 
-I used `break *0x40095f` to set a breakpoint right after the random result is stored for comparison. 
+I used `break *0x40095f` to set a breakpoint after the random number is chosen. The number is still stored in the EAX register at this point, so I just printed it out from there.
 <img width="817" height="526" alt="Screenshot 2025-12-04 at 1 46 08 PM" src="https://github.com/user-attachments/assets/13b10242-0102-4e73-ad31-aa7f605d0431" />
 
 This printed the correct number before the input was asked, thus allowing me to get the flag. 
