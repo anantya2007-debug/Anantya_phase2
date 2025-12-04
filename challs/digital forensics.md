@@ -111,6 +111,7 @@ Hint:
 I named my Ninetails "j4gjesg4", quite a peculiar name, isn't it?
 
 ## Solution: 
+I first extracted the `.ad1` file from the given `.rar`. 
 <img width="455" height="58" alt="Screenshot 2025-11-21 at 9 15 41 PM" src="https://github.com/user-attachments/assets/e092019a-60fa-4823-b910-bc0f9fc723a5" />
 
 
