@@ -64,3 +64,33 @@ KCTF{NjkSfTYaIi}
 
 ## Resources:
 - [https://www.youtube.com/watch?v=1iptoUKXrcI](url)
+
+
+# Time 
+
+## Solution:
+
+I first ran `file time` to see what the file type is.
+<img width="724" height="87" alt="Screenshot 2025-12-04 at 12 51 32 PM" src="https://github.com/user-attachments/assets/5a3d3e46-4b13-4baa-8df0-973466bb5e99" />
+
+I then ran the file, and it opened to a number-guessing game. 
+
+<img width="701" height="228" alt="Screenshot 2025-12-04 at 12 52 32 PM" src="https://github.com/user-attachments/assets/ce1dfdd8-e51b-45be-b93a-12341ecb8e06" />
+
+I used `disassemble main`.
+<img width="719" height="147" alt="Screenshot 2025-12-04 at 1 32 01 PM" src="https://github.com/user-attachments/assets/2a772ed6-b083-49e8-b3d1-69045e5ec20a" />
+
+From the screenshot, I saw that it took the input number and compared it to the secret number. If the two numbers were the same, then it would return the flag. Otherwise, it would jump (`jne`) it and say that the number given was the wrong answer. 
+
+I used `break *0x4009fc` to set a breaking point so that it breaks right before the comparison executes. So at this point, `%eax` holds the input number and `-0xc(%rbp)` holds the secret random number. So I realised I could just print out this value to see the secret number. 
+<img width="783" height="334" alt="Screenshot 2025-12-04 at 1 40 28 PM" src="https://github.com/user-attachments/assets/a40b7c3d-188b-4cbd-851a-b7246f16edc9" />
+
+This worked in the scenario of me wanting to find the secret number, but I also wanted to get the flag message printed, so I needed to set the break earlier on. 
+
+<img width="672" height="114" alt="Screenshot 2025-12-04 at 1 43 17 PM" src="https://github.com/user-attachments/assets/539554d8-bf98-4fce-8409-2ff5ea83c4a6" />
+
+I used `break *0x40095f` to set a breakpoint right after the random result is stored for comparison. 
+<img width="817" height="526" alt="Screenshot 2025-12-04 at 1 46 08 PM" src="https://github.com/user-attachments/assets/13b10242-0102-4e73-ad31-aa7f605d0431" />
+
+This printed the correct number before the input was asked, thus allowing me to get the flag. 
+
