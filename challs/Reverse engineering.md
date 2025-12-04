@@ -123,5 +123,8 @@ I then got the flag by plotting the characters.
 byuctf{android_piece_0f_c4ke}
 ```
 
+## Resources:
+-[https://www.youtube.com/watch?v=oJl52fbGKlE](url)
+
 
 
