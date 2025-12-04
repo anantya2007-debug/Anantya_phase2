@@ -114,8 +114,9 @@ I went into `resources<res<layout<activity_main.xml` and found flag parts 1 thro
 
 <img width="692" height="622" alt="Screenshot 2025-12-04 at 6 09 43 PM" src="https://github.com/user-attachments/assets/c1d2cd5e-3a46-41ee-b662-4284df2ecac3" />
 
-I then used Android Studio to visualize the XML layout and got the flag. 
+I then got the flag by plotting the characters. 
 
+<img width="720" height="367" alt="Screenshot 2025-12-04 at 7 41 03 PM" src="https://github.com/user-attachments/assets/5d1dcd69-a645-40ba-ae5d-6f384b61afe7" />
 
 ## Flag:
 ```
