@@ -94,3 +94,33 @@ I used `break *0x40095f` to set a breakpoint after the random number is chosen. 
 
 This printed the correct number before the input was asked, thus allowing me to get the flag. 
 
+# VeridisQuo
+
+## Solution: 
+I first ran `file VeridisQuo.apk` to see what the file type is, after which I unzipped the file.
+<img width="806" height="123" alt="Screenshot 2025-12-04 at 2 28 08 PM" src="https://github.com/user-attachments/assets/ae5e5dc1-47bb-45e9-87e5-0b4f534b944f" />
+
+I then created a folder and moved the APK into it. I then decompiled using the command `apktool d VeridisQuo.apk -o VeridisQuo_src`
+
+<img width="1092" height="482" alt="Screenshot 2025-12-04 at 4 50 58 PM" src="https://github.com/user-attachments/assets/1f957f30-67a9-4d2c-93d3-6a9c401e4592" />
+
+`smali` contains the decompiled code of the app, so I tried going further into that.
+
+I then used `jadx-gui` to decompile the APK into readable Java code. I saw that there were mentions of a flag in `utilities`, and I understood from it that the flag would be 28 characters long. 
+
+<img width="665" height="626" alt="Screenshot 2025-12-04 at 5 31 54 PM" src="https://github.com/user-attachments/assets/7560a840-f366-4ba5-b879-e67df6a4f3a1" />
+
+I went into `resources<res<layout<activity_main.xml` and found flag parts 1 through 28, with each having one character. The previous screenshot shows that the flag parts are cleared during runtime. 
+
+<img width="692" height="622" alt="Screenshot 2025-12-04 at 6 09 43 PM" src="https://github.com/user-attachments/assets/c1d2cd5e-3a46-41ee-b662-4284df2ecac3" />
+
+I then used Android Studio to visualize the XML layout and got the flag. 
+
+
+## Flag:
+```
+byuctf{android_piece_0f_c4ke}
+```
+
+
+
