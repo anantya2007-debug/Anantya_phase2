@@ -61,3 +61,6 @@ I ran the file and input the password to finally get the flag.
 ```
 KCTF{NjkSfTYaIi}
 ```
+
+## Resources:
+- [https://www.youtube.com/watch?v=1iptoUKXrcI](url)
