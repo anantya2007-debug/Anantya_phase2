@@ -20,6 +20,9 @@ Further, I saw that the file that was opened was not the same file that we neede
 <img width="444" height="68" alt="Screenshot 2025-12-06 at 11 08 28 AM" src="https://github.com/user-attachments/assets/d22ba794-dd4b-4725-a96f-835389735fe6" />
 I tried renaming my file to the file mentioned above, but the result still looked like garbage, even tho program was now running fully. 
 
+Now, when running the program in gdb, the output has changed. 
+<img width="737" height="203" alt="Screenshot 2025-12-06 at 11 21 14 AM" src="https://github.com/user-attachments/assets/68ce61c2-5f2f-47ac-bc6e-48bdaae12c9f" />
+
 # worthy.knight
 
 ## Solution:
