@@ -1,3 +1,25 @@
+#Joy Division 
+
+## Solution: 
+I first checked the file types of the given files. 
+<img width="1508" height="109" alt="Screenshot 2025-12-06 at 10 50 14 AM" src="https://github.com/user-attachments/assets/f463e2c5-93a9-4623-b067-cf9ee36ef5b7" />
+
+I ran the `disorder` file and got the following output. 
+<img width="730" height="208" alt="Screenshot 2025-12-06 at 10 55 57 AM" src="https://github.com/user-attachments/assets/799725cd-7096-42e1-bee0-feef1e5c9979" />
+
+From this, I could see that it was trying to open a file, which I'm assuming is `flag.txt`, but the file wasn't being opened correctly. 
+
+I then backtraced to see the stack at the moment of the crash. It showed that the file pointer was set to null, which probably meant that the fopen() function had failed. 
+<img width="714" height="102" alt="Screenshot 2025-12-06 at 11 01 22 AM" src="https://github.com/user-attachments/assets/5d9e4857-7249-4afd-aa5a-35cebc0db4bf" />
+
+I then disassembled the main to look more into what was happening with the file. This is where the fopen() is opening a file.  
+<img width="735" height="104" alt="Screenshot 2025-12-06 at 11 07 49 AM" src="https://github.com/user-attachments/assets/c2257f57-b7e3-46da-83d4-9438d173836e" />
+
+Further, I saw that the file that was opened was not the same file that we needed for the flag.
+
+<img width="444" height="68" alt="Screenshot 2025-12-06 at 11 08 28 AM" src="https://github.com/user-attachments/assets/d22ba794-dd4b-4725-a96f-835389735fe6" />
+I tried renaming my file to the file mentioned above, but the result still looked like garbage, even tho program was now running fully. 
+
 # worthy.knight
 
 ## Solution:
