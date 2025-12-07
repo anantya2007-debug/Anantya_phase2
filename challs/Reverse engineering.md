@@ -9,7 +9,12 @@ I ran the `disorder` file and got the following output.
 
 I opened `disorder` on Ghidra and saw from the program what was essentially happening was that the original secret was read from `palatinepackflag.txt`, the bits on it were flipped, then are expanded thrice before being placed in `flag.txt`. 
 
-To reverse this, I had to first collapse the data in `flag.txt` and then undo the flipbits and mentioned in `disorder`. On doing this i could then get the flag. 
+flipbits logic:
+<img width="555" height="147" alt="Screenshot 2025-12-07 at 7 31 26 PM" src="https://github.com/user-attachments/assets/a126af7e-da09-4e22-b4ad-246ed5794c31" />
+
+To reverse this, I had to first collapse the data in `flag.txt` and then undo the flipbits and mentioned in `disorder`. On doing this, i could then get the flag. 
+
+
 ```bash
 def collapse(s: bytes) -> bytearray:
     res = bytearray()
