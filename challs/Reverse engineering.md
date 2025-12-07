@@ -226,12 +226,24 @@ DawgCTF{S0000_CL43N!}
 <img width="734" height="137" alt="Screenshot 2025-12-07 at 6 34 29 PM" src="https://github.com/user-attachments/assets/6dcbed0c-2e38-4a92-ac3f-1f0d459db365" />
 <img width="673" height="109" alt="Screenshot 2025-12-07 at 6 34 55 PM" src="https://github.com/user-attachments/assets/dfbd7fdf-b181-47b1-87c7-53007437c375" />
 
+I found that the main logic was in `shinyclean::main`, so I disassembled it so i could inspect it. 
 <img width="572" height="254" alt="Screenshot 2025-12-07 at 6 42 01 PM" src="https://github.com/user-attachments/assets/27b2eccf-ab88-4dc6-9079-fce6e2fe58bb" />
 
 Same as the last time, I got an array of bytes. 
 `cf 09 1e b3 c8 3c 2f af bf 24 25 8b d9 3d 5c e3 d4 26 59 8b c8 5c 3b f5 f6`
 
+I also found a `SHA-256 hash` in .rodata, which I dumped to get this. 
+`61cd3bdb1272953e049b0185b12703f8f6454c7df95c38cc042423c13e05ee51`
 
+So basically, the program decrypts the bytes and compares it to make sure that SHA-256 hash of the bytes equals the expected hash. From whwihc i got `code = 139 + (104<<8) + (105<<16) + (212<<24)`
 
+I then put this into the program to get the flag. 
+ 
+<img width="664" height="151" alt="Screenshot 2025-12-07 at 7 00 12 PM" src="https://github.com/user-attachments/assets/8c567c85-06a9-4b10-8252-036beb8de94c" />
+
+## Flag:
+```
+DawgCTF{4LL_RU57_N0_C4R!}
+```
 
 
