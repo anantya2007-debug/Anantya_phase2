@@ -119,6 +119,34 @@ I uploaded the .ad1 file to FTK Imager and saw the following.
 <img width="749" height="512" alt="Screenshot 2025-12-07 at 11 08 16 AM" src="https://github.com/user-attachments/assets/bfd5184b-2cdc-4d51-98c8-1fa437cd696e" />
 
 I found the mentioned files (key4.db and logins.json).
+I then used `firefox_decrypt.py` to decrypt the passwords. This is what i got. 
+```
+https://www.rehack.xyz
+Username: warlocksmurf
+Password: GCTF{m0zarella
+
+https://ctftime.org
+Username: ilovecheese
+Password: CHEEEEEEEEEEEEEEEEEEEEEEEEEESE
+
+https://www.reddit.com
+Username: bluelobster
+Password: _f1ref0x_
+
+https://www.facebook.com
+Username: flag
+Password: SIKE
+
+https://warlocksmurf.github.io
+Username: Man I Love Forensics
+Password: p4ssw0rd}
+```
+
+## Flag:
+```
+GCTF{m0zarella_f1ref0x_p4ssw0rd}
+```
+
 
 
 ## Resources:
