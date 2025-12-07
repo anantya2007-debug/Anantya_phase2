@@ -114,6 +114,12 @@ I named my Ninetails "j4gjesg4", quite a peculiar name, isn't it?
 I first extracted the `.ad1` file from the given `.rar`. 
 <img width="455" height="58" alt="Screenshot 2025-11-21 at 9 15 41 PM" src="https://github.com/user-attachments/assets/e092019a-60fa-4823-b910-bc0f9fc723a5" />
 
+I uploaded the .ad1 file to FTK Imager and saw the following. 
+
+<img width="749" height="512" alt="Screenshot 2025-12-07 at 11 08 16 AM" src="https://github.com/user-attachments/assets/bfd5184b-2cdc-4d51-98c8-1fa437cd696e" />
+
+<img width="603" height="373" alt="Screenshot 2025-12-07 at 12 19 41 PM" src="https://github.com/user-attachments/assets/1fd55e78-facd-4116-ba2e-28b2ebad31da" />
+
 
 ## Resources:
 - [https://dfir.science/2021/09/What-is-an-AD1.html](url)
