@@ -1,4 +1,4 @@
-#Joy Division 
+# Joy Division 
 
 ## Solution: 
 I first checked the file types of the given files. 
