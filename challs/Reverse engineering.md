@@ -7,21 +7,46 @@ I first checked the file types of the given files.
 I ran the `disorder` file and got the following output. 
 <img width="730" height="208" alt="Screenshot 2025-12-06 at 10 55 57 AM" src="https://github.com/user-attachments/assets/799725cd-7096-42e1-bee0-feef1e5c9979" />
 
-From this, I could see that it was trying to open a file, which I'm assuming is `flag.txt`, but the file wasn't being opened correctly. 
+I opened `disorder` on Ghidra and saw from the program what was essentially happening was that the original secret was read from `palatinepackflag.txt`, the bits on it were flipped, then are expanded thrice before being placed in `flag.txt`. 
 
-I then backtraced to see the stack at the moment of the crash. It showed that the file pointer was set to null, which probably meant that the fopen() function had failed. 
-<img width="714" height="102" alt="Screenshot 2025-12-06 at 11 01 22 AM" src="https://github.com/user-attachments/assets/5d9e4857-7249-4afd-aa5a-35cebc0db4bf" />
+To reverse this, I had to first collapse the data in `flag.txt` and then undo the flipbits and mentioned in `disorder`. On doing this i could then get the flag. 
+```bash
+def collapse(s: bytes) -> bytearray:
+    res = bytearray()
+    for i in range(len(s) // 2):
+        if i % 2 == 0:
+            res.append((s[2 * i] & 0x0F) | (s[2 * i + 1] & 0xF0))
+        else:
+            res.append((s[2 * i] & 0xF0) | (s[2 * i + 1] & 0x0F))
+    return res
 
-I then disassembled the main to look more into what was happening with the file. This is where the fopen() is opening a file.  
-<img width="735" height="104" alt="Screenshot 2025-12-06 at 11 07 49 AM" src="https://github.com/user-attachments/assets/c2257f57-b7e3-46da-83d4-9438d173836e" />
+def main():
+    data = open("flag.txt", "rb").read()
 
-Further, I saw that the file that was opened was not the same file that we needed for the flag.
+    data = collapse(data)
+    data = collapse(data)
+    data = collapse(data)
 
-<img width="444" height="68" alt="Screenshot 2025-12-06 at 11 08 28 AM" src="https://github.com/user-attachments/assets/d22ba794-dd4b-4725-a96f-835389735fe6" />
-I tried renaming my file to the file mentioned above, but the result still looked like garbage, even tho program was now running fully. 
+    data = bytearray(data)
+    v3 = 105
+    for i in range(len(data)):
+        if i % 2 == 0:
+            data[i] = (~data[i]) & 0xFF
+        else:
+            data[i] ^= v3 & 0xFF
+            v3 += 32
 
-Now, when running the program in gdb, the output has changed. 
-<img width="737" height="203" alt="Screenshot 2025-12-06 at 11 21 14 AM" src="https://github.com/user-attachments/assets/68ce61c2-5f2f-47ac-bc6e-48bdaae12c9f" />
+    print(data.decode(errors="ignore"))
+
+if __name__ == "__main__":
+    main()
+```
+<img width="488" height="51" alt="Screenshot 2025-12-07 at 7 21 49 PM" src="https://github.com/user-attachments/assets/861132bd-05ea-49d2-a4c1-f3bb0c255163" />
+
+## Flag:
+```
+sunshine{C3A5ER_CR055ED_TH3_RUB1C0N}
+```
 
 # worthy.knight
 
