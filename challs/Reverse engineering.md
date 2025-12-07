@@ -151,5 +151,77 @@ byuctf{android_piece_0f_c4ke}
 ## Resources:
 -[https://www.youtube.com/watch?v=oJl52fbGKlE](url)
 
+# Dusty
+
+## Solution:
+## Dust_noob
+<img width="727" height="113" alt="Screenshot 2025-12-07 at 3 25 44 PM" src="https://github.com/user-attachments/assets/82d9e7ac-4908-4ad4-a1a1-704e6009219e" />
+
+<img width="750" height="84" alt="Screenshot 2025-12-07 at 3 25 56 PM" src="https://github.com/user-attachments/assets/42783a6e-c0a5-4813-b6d7-f11b80c74b15" />
+
+On disassembling the main, I got the function body was in `_ZN10shinyclean4main17h4b15dd54e331d693E`
+
+<img width="737" height="389" alt="Screenshot 2025-12-07 at 3 30 36 PM" src="https://github.com/user-attachments/assets/6ad989b8-4e3f-4496-820e-fc471ec41fc0" />
+
+I then saw a long chain of movb instructions that was writing a single byte into an array. I wrote down this array and got 
+```bash
+0x7b
+0x5e
+0x48
+0x58
+0x7c
+0x6b
+0x79
+0x44
+0x79
+0x6d
+0x0c
+0x0c
+0x60
+0x7c
+0x0b
+0x6d
+0x60
+0x68
+0x0b
+0x0a
+0x77
+0x1e
+0x42
+```
+After this, I saw that the loop was using XOR with 0x3f to get the output. 
+
+<img width="612" height="93" alt="Screenshot 2025-12-07 at 3 44 38 PM" src="https://github.com/user-attachments/assets/aa1663d2-6a85-4418-8fb8-5f250e71a290" />
+
+From this, I got the flag. 
+
+## Flag:
+```
+DawgCTF{FR33_C4R_W45@!}
+```
+
+## Dust_intermediate
+
+<img width="748" height="150" alt="Screenshot 2025-12-07 at 3 48 27 PM" src="https://github.com/user-attachments/assets/a4d85b92-8d99-462f-a29f-63656f10757a" />
+
+<img width="736" height="137" alt="Screenshot 2025-12-07 at 3 49 03 PM" src="https://github.com/user-attachments/assets/34ebe0dd-2d10-4b83-831d-97a1957e0667" />
+
+It was similar to the last one, where the function body was in `_ZN11shinyclean24main17h38206fcee08f84d4E`. 
+
+<img width="735" height="359" alt="Screenshot 2025-12-07 at 3 52 36 PM" src="https://github.com/user-attachments/assets/e40204de-b22f-42ec-90f3-8444c7cab77c" />
+
+From this, I saw that the program was sending the input string into a worker thread through a channel, which then somehow becomes transformed and received back, which was then compared with the bytes of another table. I printed this table to see what had to be received.   
+<img width="745" height="203" alt="Screenshot 2025-12-07 at 4 07 39 PM" src="https://github.com/user-attachments/assets/59cb9e71-39f5-4d08-8281-547a7dc6c5fc" />
+
+<img width="927" height="71" alt="Screenshot 2025-12-07 at 4 46 53 PM" src="https://github.com/user-attachments/assets/835d3cfd-5f4d-4bb7-88b2-533941018e91" />
+
+
+<img width="784" height="163" alt="Screenshot 2025-12-07 at 4 49 05 PM" src="https://github.com/user-attachments/assets/d6c22003-5a10-440f-9c6a-6974265aa1f8" />
+
+## Flag:
+```
+DawgCTF{S0000_CL43N!}
+```
+
 
 
