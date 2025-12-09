@@ -11,10 +11,11 @@
 - URI (unique resource identifier): can be used to access a resource on a web server(if manipulated)
 
 - Firewall logs show if the attacker gained access, established a connection, etc.
+- Directory traversal: ../../etc/passwd
+- Automated SQLi tools: Havij, sqlmap
+
   
 ### Codes
 - 504: Successful SQL injection
 - 401, 403, 404: unauthorized response, forbidden, page not found
 
-- Directory traversal: ../../etc/passwd
-- Automated SQLi tools: Havij, sqlmap
