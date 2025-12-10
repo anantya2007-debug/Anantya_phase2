@@ -5,10 +5,11 @@
 - Authorization: verification of your permissions
 
 - authentication first, then authorization
+- `inspect` a web page to search for vulnerabilities
+- UUID (universal unique identifier): [https://www.uuidtools.com/decode](url)
+
 
 privilege escalation: 
 - vertical privilege escalation: gaining access to more features
 - horizontal privilege escalation: gain access to features you are authorized to use, but data you are not supposed to have access to (like someone else's details) 
 
-- `inspect` a web page to search for vulnerabilities
-- UUID (universal unique identifier): [https://www.uuidtools.com/decode](url)
