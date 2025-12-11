@@ -1,0 +1,2 @@
+- nmap: port scanning
+- 22 -> default SSH port
