@@ -61,4 +61,6 @@ The transformations take place in four parts:
 - The final step collapses 6 numbers into 1, which is then compared to the `TARGET_PROBABILITY`
    <img width="306" height="76" alt="Screenshot 2025-12-15 at 9 21 16 PM" src="https://github.com/user-attachments/assets/c30704ed-31d3-4164-9666-d3c57263fd75" />
 
+   yes
+
 
