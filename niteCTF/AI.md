@@ -5,13 +5,10 @@
 My friend can never remember movie names, absolutely hopeless. This time he only recalls six cast members, nothing else. He's always been dense, but we've been a tight for years, so I guess I'm stuck helping him again. Can you figure out the movie he's trying to remember?
 
 ## Solution 
-
-- 6 cast members denote the 6 nodes that are clustered together that we need to find in the neural network, which then have to be arranged in descending order to get the flag.
-- To find the cluster of nodes we can use the K Nearest Neighbors Classification.
-- K-Nearest Neighbors Classifier first stores the training examples. During prediction, when it encounters a new instance (or test example) to predict, it finds the K number of training instances nearest to this new instance.  Then assigns the most common class among the K-Nearest training instances to this test instance.
-- Using the nearest neighbours code to find 5 other closest indices to 1 that we choose.
-- Similarly, when we get 6 nodes coming together everytime, when nearest distance is measured, gives us the classified cluster we need. Like actors of a single movie would be found together at every testing. Rough snippet of the logic is given below.
-```python
+6 cast members denote the 6 nodes that are clustered together that we need to find in the neural network, which then have to be arranged in descending order to get the flag. To find the cluster of nodes we can use the K Nearest Neighbors Classification.
+K-Nearest Neighbors Classifier first stores the training examples. During prediction, when it encounters a new instance (or test example) to predict, it finds the K number of training instances nearest to this new instance.  Then assigns the most common class among the K-Nearest training instances to this test instance. Using the nearest neighbours code to find 5 other closest indices to 1 that we choose.
+Similarly, when we get 6 nodes coming together everytime, when nearest distance is measured, gives us the classified cluster we need. Like actors of a single movie would be found together at every testing. Rough snippet of the logic is given below.
+```bash
 import numpy as np
 from sklearn.cluster import KMeans
 
@@ -33,8 +30,8 @@ for movie in sorted(movies):
     seq = ",".join(str(x) for x in sorted(top6, reverse=True)) #sort the 6 actors in reverse order
     print(f"Movie {movie}: seq={seq}")
 ```
-- This prints `Movie 3: seq=189,177,134,108,37,29`
-- Submitting it in the url https://antakshari1.chall.nitectf25.live/, we get the flag.
+This prints `Movie 3: seq=189,177,134,108,37,29`
+Submitting it in the url https://antakshari1.chall.nitectf25.live/, we get the flag.
 
 ## Flag
 ```
