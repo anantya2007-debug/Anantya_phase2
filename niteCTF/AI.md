@@ -5,7 +5,7 @@
 My friend can never remember movie names, absolutely hopeless. This time he only recalls six cast members, nothing else. He's always been dense, but we've been a tight for years, so I guess I'm stuck helping him again. Can you figure out the movie he's trying to remember?
 
 ## Solution 
-6 cast members denote the 6 nodes that are clustered together that we need to find in the neural network, which then have to be arranged in descending order to get the flag. To find the cluster of nodes we can use the K Nearest Neighbors Classification.
+From the description, it is seen that the 6 cast members denote the 6 nodes that are clustered together that we need to find in the neural network, which then have to be arranged in descending order to get the flag. We then used the K Nearest Neighbors Classification to find the cluster of nodes.
 K-Nearest Neighbors Classifier first stores the training examples. During prediction, when it encounters a new instance (or test example) to predict, it finds the K number of training instances nearest to this new instance.  Then assigns the most common class among the K-Nearest training instances to this test instance. Using the nearest neighbours code to find 5 other closest indices to 1 that we choose.
 Similarly, when we get 6 nodes coming together everytime, when nearest distance is measured, gives us the classified cluster we need. Like actors of a single movie would be found together at every testing. Rough snippet of the logic is given below.
 ```bash
@@ -37,3 +37,23 @@ Submitting it in the url https://antakshari1.chall.nitectf25.live/, we get the f
 ```
 nite{Diehard_1891771341083729}
 ```
+
+# floating-point guardian
+
+## Description 
+
+Look at my digital gurdian. I built it using my custom made neural network written in C. Bad move? eh well.
+Connection: ncat --ssl floating.chals.nitectf25.live 1337
+
+## Solution 
+
+After reading through the source program given, we realised that the program essentially just took 15 numbers and put them through certain transformations, after which the final number was compared to a predefined fixed number. 
+<img width="324" height="50" alt="Screenshot 2025-12-15 at 9 02 33 PM" src="https://github.com/user-attachments/assets/a2d618cf-73eb-4408-b42c-673f4868d537" />
+
+The transformations take place in three parts:
+
+- The first transformations are individual according to the indices of the inputs. 
+<img width="547" height="123" alt="Screenshot 2025-12-15 at 9 09 15 PM" src="https://github.com/user-attachments/assets/704ba1cd-cbaf-45b3-8b4f-0b4c928a8606" />
+- In this step, 15 numbers are collapsed into 8 numnbers 
+<img width="388" height="109" alt="Screenshot 2025-12-15 at 9 13 34 PM" src="https://github.com/user-attachments/assets/4585f8fe-e9fd-40b3-bc13-a8bf1f961229" />
+- 
