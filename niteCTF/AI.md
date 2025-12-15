@@ -54,13 +54,16 @@ The transformations take place in four parts:
 
 - The first transformations are individual according to the indices of the inputs. 
 <img width="547" height="123" alt="Screenshot 2025-12-15 at 9 09 15 PM" src="https://github.com/user-attachments/assets/704ba1cd-cbaf-45b3-8b4f-0b4c928a8606" />
+
 - In this step, 15 numbers are collapsed into 8 numbers 
 <img width="388" height="109" alt="Screenshot 2025-12-15 at 9 13 34 PM" src="https://github.com/user-attachments/assets/4585f8fe-e9fd-40b3-bc13-a8bf1f961229" />
+
 - In the next step, 8 numbers are collapsed into 6 
 <img width="317" height="84" alt="Screenshot 2025-12-15 at 9 19 04 PM" src="https://github.com/user-attachments/assets/36839417-fe5a-4937-8d02-c460078ea979" />
+
 - The final step collapses 6 numbers into 1, which is then compared to the `TARGET_PROBABILITY`
    <img width="306" height="76" alt="Screenshot 2025-12-15 at 9 21 16 PM" src="https://github.com/user-attachments/assets/c30704ed-31d3-4164-9666-d3c57263fd75" />
 
-   yes
+   
 
 
