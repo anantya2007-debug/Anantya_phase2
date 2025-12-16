@@ -59,7 +59,16 @@ I got the offset to be `0xc201a703b260`.
 
 From this, I got the ip from where the malware was executed as `10.72.5.205`.
 
+Using the information that was gathered and going through the website, https://www.cisa.gov/known-exploited-vulnerabilities-catalog?page=5, I found the CVE that matched this particular vulnerability. 
 
+<img width="768" height="454" alt="Screenshot 2025-12-16 at 7 31 27 PM" src="https://github.com/user-attachments/assets/19bf8b19-810a-4f94-a39b-c36d2923ef75" />
+
+Putting all of this together, I got the final flag. 
+
+## Flag
+```
+nite{dna_analysis_portal.url_10.72.5.205_CVE-2025-33053}
+```
 
 
 
