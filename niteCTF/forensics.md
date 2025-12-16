@@ -24,4 +24,32 @@ I then followed the HTTP stream.
 <img width="689" height="513" alt="Screenshot 2025-12-16 at 6 07 37 PM" src="https://github.com/user-attachments/assets/64c2498e-453e-4b34-887c-228fa819089f" />
 
 
+# Ophelia's Truth 1
+
+## Description 
+
+A detective at Moscow PD, Department 19, receives a message asking him to check the forensic analysis portal for a DNA report. Attached to the message is a file containing a link to the portal. He opens the attachment, but initially, nothing seems to happen, so he overlooks it. Later, he realizes that a crucial file from an ongoing case has gone missing.
+He has provided the forensic artifacts from his computer to you, his colleague at the cyber forensics department, to figure out what went wrong. Find:
+
+The filename of the attachment
+The ip from where the malware was executed
+The CVE the attacker exploited.
+Flag format: nite{file_name.ext_XXX.XXX.XXX.XXX_CVE-XXXX-XXXXX}
+
+## Solution 
+
+I ran `python3 vol.py -f ~/Downloads/ophelia.raw windows.info` and used volatility to identify the system profile. 
+<img width="502" height="261" alt="Screenshot 2025-12-16 at 6 52 20 PM" src="https://github.com/user-attachments/assets/09fdc729-0528-4dc3-943a-a80f3377abfb" />
+
+From this, I got that it was a Windows 10 OS and the TimeDateStamp as 2025-12-07 14:00 UTC. 
+
+I then used  `python3 vol.py -f /Users/suresh/Downloads/ophelia.raw windows.filescan \
+| grep -iE "dna|forensic|report|portal" \
+| head -20
+` to find the file that matched the challenge description. 
+<img width="975" height="213" alt="Screenshot 2025-12-16 at 7 01 34 PM" src="https://github.com/user-attachments/assets/c2c15c99-3f9c-4932-ae9f-9e700282280c" />
+
+### Filename: `dna_analysis_portal.url`
+
+
 
