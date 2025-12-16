@@ -31,8 +31,8 @@ I then followed the HTTP stream.
 A detective at Moscow PD, Department 19, receives a message asking him to check the forensic analysis portal for a DNA report. Attached to the message is a file containing a link to the portal. He opens the attachment, but initially, nothing seems to happen, so he overlooks it. Later, he realizes that a crucial file from an ongoing case has gone missing.
 He has provided the forensic artifacts from his computer to you, his colleague at the cyber forensics department, to figure out what went wrong. Find:
 
-The filename of the attachment
-The ip from where the malware was executed
+The filename of the attachment; 
+The ip from where the malware was executed; 
 The CVE the attacker exploited.
 Flag format: nite{file_name.ext_XXX.XXX.XXX.XXX_CVE-XXXX-XXXXX}
 
@@ -50,6 +50,17 @@ I then used  `python3 vol.py -f /Users/suresh/Downloads/ophelia.raw windows.file
 <img width="975" height="213" alt="Screenshot 2025-12-16 at 7 01 34 PM" src="https://github.com/user-attachments/assets/c2c15c99-3f9c-4932-ae9f-9e700282280c" />
 
 ### Filename: `dna_analysis_portal.url`
+
+I then further examined and extracted `dna_analysis_portal.url`.
+<img width="563" height="80" alt="Screenshot 2025-12-16 at 7 10 25 PM" src="https://github.com/user-attachments/assets/6ce4afd7-6378-4d50-8a19-487d325f9821" />
+
+I got the offset to be `0xc201a703b260`. 
+<img width="512" height="158" alt="Screenshot 2025-12-16 at 7 16 41 PM" src="https://github.com/user-attachments/assets/7d5d21ea-3f99-4660-81cb-144d6753363d" />
+
+From this, I got the ip from where the malware was executed as `10.72.5.205`.
+
+
+
 
 
 
