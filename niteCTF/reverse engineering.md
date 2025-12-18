@@ -15,4 +15,6 @@ The presence of .tlc but no tlc callbacks suggested the precense of manual contr
 I then used radare2 to map the functions and calls. 
 <img width="576" height="273" alt="Screenshot 2025-12-16 at 10 12 33 PM" src="https://github.com/user-attachments/assets/233dfded-f162-4081-b2cb-e67297939ba8" />
 
+I then used `afl` to list all the discovered functions, after which I saw the following. I started picking random functions and disassembling them. 
+
 <img width="717" height="425" alt="Screenshot 2025-12-16 at 10 12 14 PM" src="https://github.com/user-attachments/assets/6295c062-8daa-4d3e-96b6-8cf7db4be7ce" />
