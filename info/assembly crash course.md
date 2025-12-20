@@ -1,4 +1,4 @@
-https://pwn.college/computing-101/assembly-crash-course/?
+**Link** : https://pwn.college/computing-101/assembly-crash-course/
 
 - CPU -> Logic gates 
 <img width="570" height="268" alt="Screenshot 2025-12-19 at 3 25 25 PM" src="https://github.com/user-attachments/assets/75baebfd-faa1-4e29-a26a-c473daea3f55" />
