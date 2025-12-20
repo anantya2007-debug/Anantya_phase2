@@ -25,7 +25,7 @@
     1. From higher to lower: the extra just gets zeroed out
 - **movsx** : sign-extended move; presevers two's compliment value
 - **xchg** : swaps value of two register
-- **rip** (special register): address of next instruction 
+- **rip** (special register): address of next instruction; relative addressing  
 
 <img width="494" height="186" alt="Screenshot 2025-12-20 at 11 41 37 AM" src="https://github.com/user-attachments/assets/760382f2-a1e4-47b9-bfbc-74e48a934a3d" />
 
@@ -39,8 +39,37 @@
     1. **push**
     2. **pop**
 - **rsp** : stores address of stack
-- **[]** : memory address 
+- **[]** : memory address
+- modern systems store data backwards, in **little endian**
+- **lea** : load effective address; address specified by its first operand into the register specified by its second operand; can directly access the rip register 
 
+### Control flow:
+- **jmp** : jumps to the specified label; interrupts sequence 
+<img width="189" height="203" alt="Screenshot 2025-12-20 at 2 45 01 PM" src="https://github.com/user-attachments/assets/e74309fa-0ccf-4d05-bc86-4cc5ec41b43c" />
+- conditional jumps check conditions stored in the register **rflags**
+
+- Main conditional flags:
+     1. Carry Flag: was the 65th bit 1?
+     2. Zero Flag: was the result 0?
+     3. Overflow Flag: did the result "wrap" between positive to negative?
+     4. Sign Flag: was the result's signed bit set (i.e., was it negative)?
+
+- **Loop**:
+   ```bash
+   mov rax, 0
+   LOOP_HEADER:
+   inc rax
+   cmp rax, 10
+   jb LOOP_HEADER
+   ```
+- **call** saves the place so **ret** can return to that place
+     ```bash
+     call FUNC_CHECK   #calls the function
+
+     FUNC_CHECK:
+     mov ax, 1337
+     ret               #function edns and returns back to where it was called
+     ```
 
 ```bash
 import pwn
