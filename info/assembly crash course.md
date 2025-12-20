@@ -25,9 +25,33 @@
     1. From higher to lower: the extra just gets zeroed out
 - **movsx** : sign-extended move; presevers two's compliment value
 - **xchg** : swaps value of two register
-
 - **rip** (special register): address of next instruction 
 
 <img width="494" height="186" alt="Screenshot 2025-12-20 at 11 41 37 AM" src="https://github.com/user-attachments/assets/760382f2-a1e4-47b9-bfbc-74e48a934a3d" />
 
+- **add** reg1, reg2 -> reg1 += reg2
+- **sub** reg1, reg2 -> reg1 -= reg2
+- **imul** reg1, reg2 -> reg1 *= reg2 ; mul (unsigned multiply) and imul (signed multiply)
+
+
+### Memory:
+- Stack
+    1. **push**
+    2. **pop**
+- **rsp** : stores address of stack
+- **[]** : memory address 
+
+
+```bash
+import pwn
+
+pwn.context.update(arch="amd64")
+output = pwn.process("/challenge/run")
+output.write(pwn.asm("""
+
+# Write your assembly code here
+
+"""))
+print(output.readallS())
+```
   
