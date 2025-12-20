@@ -23,6 +23,30 @@ After using the filter `http.request` I found `/telemetry` which was also in the
 I then followed the HTTP stream. 
 <img width="689" height="513" alt="Screenshot 2025-12-16 at 6 07 37 PM" src="https://github.com/user-attachments/assets/64c2498e-453e-4b34-887c-228fa819089f" />
 
+I then got the attacker's CID. 
+<img width="962" height="305" alt="Screenshot 2025-12-20 at 10 29 27 PM" src="https://github.com/user-attachments/assets/ea365c59-3e49-421b-8af7-5fd8d9c1179e" />
+
+### Attacker SCID: 2457ce19cb87e0eb
+
+Using the filter `quic`, I found a JSON `telemetry_sslkeylog`. 
+Then used `http3.request.uri contains "source"` to find `tar.gz`. I extracted it to get `.env` file which had `AES_FLAG_KEY=wEN64tLF1PtOglz3Oorl7su8_GQzmlU2jbFP70cFz7c=`. 
+
+I then used the following code to decrypt the flag. 
+
+```bash
+from cryptography.fernet import Fernet
+
+KEY = b"wEN64tLF1PtOglz3Oorl7su8_GQzmlU2jbFP70cFz7c="
+TOKEN = b"gAAAAABpNXDCHUJ4YqH0Md2p6tzE303L8z5kPpPPWwYYrXUdiyW89eCaWWL1dbYU2JYj7SUvdwySW_egZDRF0fyFGxPua2KoFmd8upKP7cZv55jVp_SzItA="
+
+print(Fernet(KEY).decrypt(TOKEN).decode())
+```
+
+## Flag
+```
+nite{192.0.2.66_2457ce19cb87e0eb_qu1c_d4t4gr4m_pwn3d}
+```
+
 
 # Ophelia's Truth 1
 
