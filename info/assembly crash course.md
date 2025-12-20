@@ -60,6 +60,16 @@
      3. Overflow Flag: did the result "wrap" between positive to negative?
      4. Sign Flag: was the result's signed bit set (i.e., was it negative)?
 
+- Types of jumps
+     1. Relative jumps: jump + or - the next instruction.
+     2. Absolute jumps: jump to a specific address.
+     3. Indirect jumps: jump to the memory address specified in a register.
+
+- Relative jumps
+     1. Labels: Labels act as named placeholders for code locations, letting the assembler automatically calculate jump offsets for you.
+     2. nop: nop is a one-byte instruction that does nothing and is commonly used as filler to control instruction spacing.
+     3. .rept: .rept repeats an instruction a specified number of times, making it easy to generate large blocks of nops.
+
 - **Loop**:
    ```bash
    mov rax, 0
@@ -120,4 +130,11 @@ else
 and rax, rdi
 and rax, 1
 xor rax, 1
+```
+ ---
+```bash 
+movzx rax, byte ptr [0x404000]
+movzx rbx, word ptr [0x404000]
+mov ecx, dword ptr [0x404000]
+mov rdx, qword ptr [0x404000]
 ```
