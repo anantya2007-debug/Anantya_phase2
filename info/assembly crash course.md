@@ -35,7 +35,8 @@
 - **sub** reg1, reg2 -> reg1 -= reg2
 - **imul** reg1, reg2 -> reg1 *= reg2 ; mul (unsigned multiply) and imul (signed multiply)
 - **div** reg -> rax = rdx:rax / reg (where rax: quotient, rdx: remainder, reg: divisor)
-
+- **shl** al, 1 -> shifts everything to the left by 1
+- **shr** al, 1 -> shifts everything to the right by 1
 
 ### Memory:
 - Stack
@@ -106,4 +107,16 @@ output.write(pwn.asm("""
 """))
 print(output.readallS())
 ```
-  
+
+ ---
+```bash
+if x is even then
+  y = 1
+else
+  y = 0
+```
+```bash
+and rax, rdi
+and rax, 1
+xor rax, 1
+```
