@@ -20,6 +20,7 @@
 - 64-bit architecture -> each register will hold 64 bits
 - partial register access: ah, al, ax, eax, rax
 <img width="209" height="58" alt="Screenshot 2025-12-20 at 11 31 17 AM" src="https://github.com/user-attachments/assets/ce49c969-06c4-498f-83c2-ba0dcc580f85" />
+<img width="498" height="267" alt="Screenshot 2025-12-20 at 5 49 35 PM" src="https://github.com/user-attachments/assets/f4eb6963-3613-4f56-ac61-d01f12238280" />
 
 - **mov** : to load data into registers (mov rax, 0x539);  0x539-immediate value; It copies the data but doesn't move it 
     1. From higher to lower: the extra just gets zeroed out
