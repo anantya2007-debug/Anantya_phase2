@@ -26,6 +26,7 @@
 - **mov** : to load data into registers (mov rax, 0x539);  0x539-immediate value; It copies the data but doesn't move it 
     1. From higher to lower: the extra just gets zeroed out
 - **movsx** : sign-extended move; presevers two's compliment value
+- **movzx** : move with zero extended; moves a smaller value and fills the rest of the destination register with zeros
 - **xchg** : swaps value of two register
 - **rip** (special register): address of next instruction; relative addressing  
 
