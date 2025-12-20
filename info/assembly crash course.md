@@ -39,7 +39,7 @@
     1. **push**
     2. **pop**
 - **rsp** : stores address of stack
-- **[]** : memory address
+- **[ ]** : memory address
 - modern systems store data backwards, in **little endian**
 - **lea** : load effective address; address specified by its first operand into the register specified by its second operand; can directly access the rip register 
 
@@ -71,6 +71,25 @@
      mov ax, 1337
      ret               #function edns and returns back to where it was called
      ```
+
+### System calls: 
+- read(): 0
+- write(): 1
+- **syscall**
+
+### Disassembling a program 
+``` objdump -M intel -d prog_name ```
+
+### GDB
+debugging 
+
+### strace 
+how program is interacting with the OS 
+
+### Rappel 
+explore the effects of instructions 
+
+
 
 ```bash
 import pwn
