@@ -46,6 +46,7 @@
 ### Control flow:
 - **jmp** : jumps to the specified label; interrupts sequence 
 <img width="189" height="203" alt="Screenshot 2025-12-20 at 2 45 01 PM" src="https://github.com/user-attachments/assets/e74309fa-0ccf-4d05-bc86-4cc5ec41b43c" />
+
 - conditional jumps check conditions stored in the register **rflags**
 
 - Main conditional flags:
