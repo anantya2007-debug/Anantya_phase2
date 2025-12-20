@@ -32,6 +32,7 @@
 - **add** reg1, reg2 -> reg1 += reg2
 - **sub** reg1, reg2 -> reg1 -= reg2
 - **imul** reg1, reg2 -> reg1 *= reg2 ; mul (unsigned multiply) and imul (signed multiply)
+- **div** reg -> rax = rdx:rax / reg (where rax: quotient, rdx: remainder, reg: divisor)
 
 
 ### Memory:
