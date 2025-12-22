@@ -20,3 +20,9 @@
 - We can use the `man yara` command to find out what flags could be useful in our scenario, and we find the following:
     1. `-r` - Allows YARA to scan directories recursively and follow symlinks
     2. `-s` - Prints the strings found within files that match the rule
+
+
+## Answers: 
+- How many images contain the string TBFC? : `5`
+- What regex would you use to match a string that begins with TBFC: followed by one or more alphanumeric ASCII characters? : `/TBFC:[A-Za-z0-9]+/`
+- What is the message sent by McSkidy? : `Find me in HopSec Island`
