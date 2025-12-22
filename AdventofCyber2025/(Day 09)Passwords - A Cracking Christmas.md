@@ -25,3 +25,7 @@
     4. Check impact by seeing which files or passwords were successfully cracked and whether there was further access or data theft.
     5. Decide intent by identifying who ran the activity and whether it was authorised; escalate if it wasn’t.
     6. Fix and prevent by changing compromised passwords/keys, enforcing MFA, and educating users to keep such tools only in approved lab environments.
+
+## Answers: 
+- What is the flag inside the encrypted PDF? : `THM{Cr4ck1ng_PDFs_1s_34$y}`
+- What is the flag inside the encrypted zip file? : `THM{Cr4ck1n6_z1p$_1s_34$yyyy}`
