@@ -10,3 +10,8 @@
 
   
   
+
+## Answers: 
+- Which type of XSS attack requires payloads to be persisted on the backend? : `stored`
+- What's the reflected XSS flag? : `THM{Evil_Bunny}`
+- What's the stored XSS flag? : `THM{Evil_Stored_Egg}`
