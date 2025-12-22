@@ -11,3 +11,9 @@
 - `find` command searches for files with specific parameters, such as `-name`
 - Switch to the root user by running the `sudo su` command
 - every command you run is saved in a hidden history file, also called `Bash history`
+
+## Answers:
+- Which CLI command would you use to list a directory? : `ls`
+- Which command helped you filter the logs for failed logins? : `grep`
+- Which command would you run to switch to the root user? : `sudo su`
+- Finally, what flag did Sir Carrotbane leave in the root bash history? : `THM{until-we-meet-again}`
