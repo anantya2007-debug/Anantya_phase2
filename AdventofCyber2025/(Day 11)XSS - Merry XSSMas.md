@@ -4,5 +4,6 @@
      2. Stored XSS: malicious script is saved on the server and then loaded for every user who views the affected page
 
 - Protection against XSS:
-      1. Use textContent instead of inner HTML
+       1. Use textContent instead of inner HTML
+  
   
