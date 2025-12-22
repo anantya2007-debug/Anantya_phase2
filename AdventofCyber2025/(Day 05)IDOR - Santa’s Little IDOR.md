@@ -13,3 +13,8 @@ privilege escalation:
 - vertical privilege escalation: gaining access to more features
 - horizontal privilege escalation: gain access to features you are authorized to use, but data you are not supposed to have access to (like someone else's details) 
 
+
+## Answers:
+- What does IDOR stand for? : `Insecure Direct Object Reference`
+- What type of privilege escalation are most IDOR cases? : `Horizontal`
+- Exploiting the IDOR found in the view_accounts parameter, what is the user_id of the parent that has 10 children? : `15`
