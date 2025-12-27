@@ -10,3 +10,6 @@ Stuff gets lost in the process of compiling and assembling
 - Assembly → Object Files : lose logical blocks, symbolic expressions
 - Linking (Object Files → Executable) : lose source file boundaries, function-to-file mapping, static library identity 
 
+ ---
+ ELF sections:
+ - `.data` : 
