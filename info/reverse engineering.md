@@ -9,3 +9,4 @@ Stuff gets lost in the process of compiling and assembling
 - Compilation (C → Assembly) : lose variable names, type info, high-level control structures (for, while, if, switch), sequence of instructions 
 - Assembly → Object Files : lose logical blocks, symbolic expressions
 - Linking (Object Files → Executable) : lose source file boundaries, function-to-file mapping, static library identity 
+
